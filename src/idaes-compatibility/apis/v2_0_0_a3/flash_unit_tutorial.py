@@ -20,7 +20,9 @@ from pyomo.environ import ConcreteModel, SolverFactory, Constraint, value
 
 from idaes.core import FlowsheetBlock
 import idaes.logger as idaeslog
-from idaes.models.properties.activity_coeff_models.BTX_activity_coeff_VLE import BTXParameterBlock
+from idaes.models.properties.activity_coeff_models.BTX_activity_coeff_VLE import (
+    BTXParameterBlock,
+)
 from idaes.models.unit_models import Flash
 from idaes.core.util.model_statistics import degrees_of_freedom
 
@@ -32,9 +34,9 @@ def test_tutorial():
     m.fs = FlowsheetBlock(dynamic=False)
     m.pprint()
 
-    m.fs.properties = BTXParameterBlock(valid_phase=('Liq', 'Vap'),
-                                        activity_coeff_model="Ideal",
-                                        state_vars="FTPz")
+    m.fs.properties = BTXParameterBlock(
+        valid_phase=("Liq", "Vap"), activity_coeff_model="Ideal", state_vars="FTPz"
+    )
 
     m.fs.flash = Flash(property_package=m.fs.properties)
 
@@ -60,18 +62,19 @@ def test_tutorial():
     m.fs.flash.initialize(outlvl=idaeslog.INFO)
 
     # create the ipopt solver
-    solver = SolverFactory('ipopt')
+    solver = SolverFactory("ipopt")
     status = solver.solve(m, tee=True)
 
     # Check for optimal solution
     from pyomo.environ import TerminationCondition
+
     assert status.solver.termination_condition == TerminationCondition.optimal
 
     # Print the pressure of the flash vapor outlet
-    print('Pressure =', value(m.fs.flash.vap_outlet.pressure[0]))
+    print("Pressure =", value(m.fs.flash.vap_outlet.pressure[0]))
 
     print()
-    print('Output from display:')
+    print("Output from display:")
     # Call display on vap_outlet and liq_outlet of the flash
     m.fs.flash.vap_outlet.display()
     m.fs.flash.liq_outlet.display()
@@ -82,14 +85,22 @@ def test_tutorial():
     import pytest
 
     assert value(m.fs.flash.liq_outlet.flow_mol[0]) == pytest.approx(0.6038, abs=1e-3)
-    assert value(m.fs.flash.liq_outlet.mole_frac_comp[0, 'benzene']) == pytest.approx(0.4121, abs=1e-3)
-    assert value(m.fs.flash.liq_outlet.mole_frac_comp[0, 'toluene']) == pytest.approx(0.5878, abs=1e-3)
+    assert value(m.fs.flash.liq_outlet.mole_frac_comp[0, "benzene"]) == pytest.approx(
+        0.4121, abs=1e-3
+    )
+    assert value(m.fs.flash.liq_outlet.mole_frac_comp[0, "toluene"]) == pytest.approx(
+        0.5878, abs=1e-3
+    )
     assert value(m.fs.flash.liq_outlet.temperature[0]) == pytest.approx(368, abs=1e-3)
     assert value(m.fs.flash.liq_outlet.pressure[0]) == pytest.approx(101325, abs=1e-3)
 
     assert value(m.fs.flash.vap_outlet.flow_mol[0]) == pytest.approx(0.3961, abs=1e-3)
-    assert value(m.fs.flash.vap_outlet.mole_frac_comp[0, 'benzene']) == pytest.approx(0.6339, abs=1e-3)
-    assert value(m.fs.flash.vap_outlet.mole_frac_comp[0, 'toluene']) == pytest.approx(0.3660, abs=1e-3)
+    assert value(m.fs.flash.vap_outlet.mole_frac_comp[0, "benzene"]) == pytest.approx(
+        0.6339, abs=1e-3
+    )
+    assert value(m.fs.flash.vap_outlet.mole_frac_comp[0, "toluene"]) == pytest.approx(
+        0.3660, abs=1e-3
+    )
     assert value(m.fs.flash.vap_outlet.temperature[0]) == pytest.approx(368, abs=1e-3)
     assert value(m.fs.flash.vap_outlet.pressure[0]) == pytest.approx(101325, abs=1e-3)
 
@@ -118,10 +129,10 @@ def test_tutorial():
         # append the value for vapor fraction if the solve was successful
         if solve_successful(status):
             V.append(value(m.fs.flash.vap_outlet.flow_mol[0]))
-            print('... solve successful.')
+            print("... solve successful.")
         else:
             V.append(0.0)
-            print('... solve failed.')
+            print("... solve failed.")
 
     # Create and show the figure
     plt.figure("Vapor Fraction")
@@ -151,10 +162,10 @@ def test_tutorial():
         # append the value for vapor fraction if the solve was successful
         if solve_successful(status):
             V.append(value(m.fs.flash.vap_outlet.mole_frac_comp[0, "benzene"]))
-            print('... solve successful.')
+            print("... solve successful.")
         else:
             V.append(0.0)
-            print('... solve failed.')
+            print("... solve failed.")
 
     plt.figure("Purity")
     plt.plot(Q, V)
@@ -171,7 +182,9 @@ def test_tutorial():
     m.fs.flash.heat_duty.unfix()
 
     # Todo: Add a new constraint (benzene mole fraction to 0.6)
-    m.benz_purity_con = Constraint(expr= m.fs.flash.vap_outlet.mole_frac_comp[0, "benzene"] == 0.6)
+    m.benz_purity_con = Constraint(
+        expr=m.fs.flash.vap_outlet.mole_frac_comp[0, "benzene"] == 0.6
+    )
 
     # solve the problem
     status = solver.solve(m, tee=True)
@@ -184,13 +197,25 @@ def test_tutorial():
 
     # Check for optimal values
     assert value(m.fs.flash.liq_outlet.flow_mol[0]) == pytest.approx(0.4516, abs=1e-3)
-    assert value(m.fs.flash.liq_outlet.mole_frac_comp[0, 'benzene']) == pytest.approx(0.3786, abs=1e-3)
-    assert value(m.fs.flash.liq_outlet.mole_frac_comp[0, 'toluene']) == pytest.approx(0.6214, abs=1e-3)
-    assert value(m.fs.flash.liq_outlet.temperature[0]) == pytest.approx(369.07, abs=1e-2)
+    assert value(m.fs.flash.liq_outlet.mole_frac_comp[0, "benzene"]) == pytest.approx(
+        0.3786, abs=1e-3
+    )
+    assert value(m.fs.flash.liq_outlet.mole_frac_comp[0, "toluene"]) == pytest.approx(
+        0.6214, abs=1e-3
+    )
+    assert value(m.fs.flash.liq_outlet.temperature[0]) == pytest.approx(
+        369.07, abs=1e-2
+    )
     assert value(m.fs.flash.liq_outlet.pressure[0]) == pytest.approx(101325, abs=1e-3)
 
     assert value(m.fs.flash.vap_outlet.flow_mol[0]) == pytest.approx(0.5483, abs=1e-3)
-    assert value(m.fs.flash.vap_outlet.mole_frac_comp[0, 'benzene']) == pytest.approx(0.6, abs=1e-3)
-    assert value(m.fs.flash.vap_outlet.mole_frac_comp[0, 'toluene']) == pytest.approx(0.4, abs=1e-3)
-    assert value(m.fs.flash.vap_outlet.temperature[0]) == pytest.approx(369.07, abs=1e-2)
+    assert value(m.fs.flash.vap_outlet.mole_frac_comp[0, "benzene"]) == pytest.approx(
+        0.6, abs=1e-3
+    )
+    assert value(m.fs.flash.vap_outlet.mole_frac_comp[0, "toluene"]) == pytest.approx(
+        0.4, abs=1e-3
+    )
+    assert value(m.fs.flash.vap_outlet.temperature[0]) == pytest.approx(
+        369.07, abs=1e-2
+    )
     assert value(m.fs.flash.vap_outlet.pressure[0]) == pytest.approx(101325, abs=1e-3)
