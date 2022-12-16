@@ -11,49 +11,61 @@
 # at the URL "https://github.com/IDAES/idaes-pse".
 ##############################################################################
 import pytest
+import math
 
-from pyomo.environ import ConcreteModel, value, TerminationCondition, SolverStatus
+from pyomo.environ import ConcreteModel, Constraint, value, SolverFactory, units
+from pyomo.opt import TerminationCondition, SolverStatus
 
 from idaes.core.solvers import get_solver
 from idaes.core import FlowsheetBlock
-from idaes.models.unit_models import Feed
+from idaes.models.unit_models import Valve
+from idaes.models.unit_models import ValveFunctionType
 import idaes.logger as idaeslog
-from idaes.models.properties.modular_properties.base.generic_property import (
-    GenericParameterBlock,
-)
-from idaes.models.properties.modular_properties.examples.BT_ideal import configuration
+from idaes.models.properties import iapws95
 from idaes.core.util.model_statistics import degrees_of_freedom
 
 
 def test_example():
     m = ConcreteModel()
     m.fs = FlowsheetBlock(dynamic=False)
-    m.fs.properties = GenericParameterBlock(**configuration)
-    m.fs.feed = Feed(property_package=m.fs.properties)
+    m.fs.properties = iapws95.Iapws95ParameterBlock()
+    m.fs.valve = Valve(
+        valve_function_callback=ValveFunctionType.linear,
+        property_package=m.fs.properties,
+    )
 
     DOF_initial = degrees_of_freedom(m)
-    print("The initial degrees of freedom are: {0}".format(DOF_initial))
-    assert DOF_initial == 5
+    print("The initial degrees of freedom is: {0}".format(DOF_initial))
+    assert DOF_initial == 3
 
-    m.fs.feed.flow_mol.fix(100)  # converting to mol/s as unit basis is mol/s
-    m.fs.feed.mole_frac_comp[0, "benzene"].fix(0.6)
-    m.fs.feed.mole_frac_comp[0, "toluene"].fix(0.4)
-    m.fs.feed.pressure.fix(101325)  # Pa
-    m.fs.feed.temperature.fix(298)  # K
+    fin = 1000  # mol/s
+    pin = 202650  # Pa
+    pout = 101325  # Pa
+    tin = 298  # K
+
+    hin = iapws95.htpx(T=tin * units.K, P=pin * units.Pa)  # J/mol
+    cv = 1000 / math.sqrt(pin - pout) / 0.5
+
+    m.fs.valve.inlet.enth_mol[0].fix(hin)
+    m.fs.valve.inlet.flow_mol[0].fix(fin)
+    m.fs.valve.inlet.pressure[0].fix(pin)
+    m.fs.valve.outlet.pressure[0].set_value(pout)
+    m.fs.valve.Cv.fix(cv)
+    m.fs.valve.valve_opening.fix(0.5)
 
     DOF_final = degrees_of_freedom(m)
     print("The final degrees of freedom is: {0}".format(DOF_final))
     assert DOF_final == 0
 
-    m.fs.feed.initialize(outlvl=idaeslog.WARNING)
+    m.fs.valve.initialize(outlvl=idaeslog.WARNING)
     solver = get_solver()
     result = solver.solve(m, tee=True)
 
-    # Check if termination condition is optimal
     assert result.solver.termination_condition == TerminationCondition.optimal
     assert result.solver.status == SolverStatus.ok
 
-    m.fs.feed.report()
-    assert value(m.fs.feed.outlet.flow_mol[0]) == pytest.approx(100, rel=1e-6)
-    assert value(m.fs.feed.mole_frac_comp[0, "benzene"]) == pytest.approx(0.6, rel=1e-6)
-    assert value(m.fs.feed.mole_frac_comp[0, "toluene"]) == pytest.approx(0.4, rel=1e-6)
+    m.fs.valve.report()
+
+    assert value(m.fs.valve.outlet.flow_mol[0]) == pytest.approx(1000, rel=1e-6)
+    assert value(m.fs.valve.outlet.pressure[0]) == pytest.approx(101325, rel=1e-6)
+    assert value(m.fs.valve.outlet.enth_mol[0]) == pytest.approx(1880.557, rel=1e-3)

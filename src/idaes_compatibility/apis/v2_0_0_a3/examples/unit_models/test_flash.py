@@ -16,7 +16,7 @@ from pyomo.environ import ConcreteModel, value, TerminationCondition, SolverStat
 
 from idaes.core.solvers import get_solver
 from idaes.core import FlowsheetBlock
-from idaes.models.unit_models import Feed
+from idaes.models.unit_models import Flash
 import idaes.logger as idaeslog
 from idaes.models.properties.modular_properties.base.generic_property import (
     GenericParameterBlock,
@@ -29,31 +29,52 @@ def test_example():
     m = ConcreteModel()
     m.fs = FlowsheetBlock(dynamic=False)
     m.fs.properties = GenericParameterBlock(**configuration)
-    m.fs.feed = Feed(property_package=m.fs.properties)
+    m.fs.flash = Flash(property_package=m.fs.properties)
 
     DOF_initial = degrees_of_freedom(m)
     print("The initial degrees of freedom are: {0}".format(DOF_initial))
-    assert DOF_initial == 5
+    assert DOF_initial == 7
 
-    m.fs.feed.flow_mol.fix(100)  # converting to mol/s as unit basis is mol/s
-    m.fs.feed.mole_frac_comp[0, "benzene"].fix(0.6)
-    m.fs.feed.mole_frac_comp[0, "toluene"].fix(0.4)
-    m.fs.feed.pressure.fix(101325)  # Pa
-    m.fs.feed.temperature.fix(298)  # K
+    m.fs.flash.inlet.flow_mol.fix(100)  # converting to mol/s as unit basis is mol/s
+    m.fs.flash.inlet.mole_frac_comp[0, "benzene"].fix(0.6)
+    m.fs.flash.inlet.mole_frac_comp[0, "toluene"].fix(0.4)
+    m.fs.flash.inlet.pressure.fix(101325)  # Pa
+    m.fs.flash.inlet.temperature.fix(353)  # K
+    m.fs.flash.heat_duty.fix(1e5)  # W
+    m.fs.flash.deltaP.fix(0)
 
     DOF_final = degrees_of_freedom(m)
     print("The final degrees of freedom is: {0}".format(DOF_final))
     assert DOF_final == 0
 
-    m.fs.feed.initialize(outlvl=idaeslog.WARNING)
+    m.fs.flash.initialize(outlvl=idaeslog.WARNING)
     solver = get_solver()
     result = solver.solve(m, tee=True)
 
-    # Check if termination condition is optimal
     assert result.solver.termination_condition == TerminationCondition.optimal
     assert result.solver.status == SolverStatus.ok
 
-    m.fs.feed.report()
-    assert value(m.fs.feed.outlet.flow_mol[0]) == pytest.approx(100, rel=1e-6)
-    assert value(m.fs.feed.mole_frac_comp[0, "benzene"]) == pytest.approx(0.6, rel=1e-6)
-    assert value(m.fs.feed.mole_frac_comp[0, "toluene"]) == pytest.approx(0.4, rel=1e-6)
+    m.fs.flash.report()
+    assert value(m.fs.flash.liq_outlet.flow_mol[0]) == pytest.approx(97.559, rel=1e-3)
+    assert value(m.fs.flash.liq_outlet.mole_frac_comp[0, "benzene"]) == pytest.approx(
+        0.59531, rel=1e-3
+    )
+    assert value(m.fs.flash.liq_outlet.mole_frac_comp[0, "toluene"]) == pytest.approx(
+        0.40469, rel=1e-3
+    )
+    assert value(m.fs.flash.liq_outlet.pressure[0]) == pytest.approx(101325, rel=1e-3)
+    assert value(m.fs.flash.liq_outlet.temperature[0]) == pytest.approx(
+        362.69, rel=1e-3
+    )
+
+    assert value(m.fs.flash.vap_outlet.flow_mol[0]) == pytest.approx(2.4408, rel=1e-3)
+    assert value(m.fs.flash.vap_outlet.mole_frac_comp[0, "benzene"]) == pytest.approx(
+        0.7873, rel=1e-3
+    )
+    assert value(m.fs.flash.vap_outlet.mole_frac_comp[0, "toluene"]) == pytest.approx(
+        0.2127, rel=1e-3
+    )
+    assert value(m.fs.flash.vap_outlet.pressure[0]) == pytest.approx(101325, rel=1e-3)
+    assert value(m.fs.flash.vap_outlet.temperature[0]) == pytest.approx(
+        362.69, rel=1e-3
+    )
