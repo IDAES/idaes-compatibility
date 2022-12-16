@@ -18,7 +18,9 @@ from idaes.core.solvers import get_solver
 from idaes.core import FlowsheetBlock
 from idaes.models.unit_models import Feed
 import idaes.logger as idaeslog
-from idaes.models.properties.modular_properties.base.generic_property import GenericParameterBlock
+from idaes.models.properties.modular_properties.base.generic_property import (
+    GenericParameterBlock,
+)
 from idaes.models.properties.modular_properties.examples.BT_ideal import configuration
 from idaes.core.util.model_statistics import degrees_of_freedom
 
@@ -30,17 +32,17 @@ def test_example():
     m.fs.feed = Feed(property_package=m.fs.properties)
 
     DOF_initial = degrees_of_freedom(m)
-    print('The initial degrees of freedom are: {0}'.format(DOF_initial))
+    print("The initial degrees of freedom are: {0}".format(DOF_initial))
     assert DOF_initial == 5
 
-    m.fs.feed.flow_mol.fix(100) # converting to mol/s as unit basis is mol/s
+    m.fs.feed.flow_mol.fix(100)  # converting to mol/s as unit basis is mol/s
     m.fs.feed.mole_frac_comp[0, "benzene"].fix(0.6)
     m.fs.feed.mole_frac_comp[0, "toluene"].fix(0.4)
-    m.fs.feed.pressure.fix(101325) # Pa
-    m.fs.feed.temperature.fix(298) # K
+    m.fs.feed.pressure.fix(101325)  # Pa
+    m.fs.feed.temperature.fix(298)  # K
 
     DOF_final = degrees_of_freedom(m)
-    print('The final degrees of freedom is: {0}'.format(DOF_final))
+    print("The final degrees of freedom is: {0}".format(DOF_final))
     assert DOF_final == 0
 
     m.fs.feed.initialize(outlvl=idaeslog.WARNING)
