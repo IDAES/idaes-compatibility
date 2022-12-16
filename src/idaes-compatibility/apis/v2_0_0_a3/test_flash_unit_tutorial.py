@@ -11,8 +11,9 @@
 # license information.
 #################################################################################
 """
-Backward compatibility test for flash unit tutorial/
+Backward compatibility test for flash unit tutorial
 """
+import pytest
 import numpy as np
 import matplotlib.pyplot as plt
 
