@@ -22,7 +22,7 @@ import idaes.models.properties.iapws95 as iapws95
 path = os.path.dirname(os.path.abspath(__file__))
 
 
-def test_iawps95_liquid_phase():
+def test_iapws95_liquid_phase():
     m = ConcreteModel()
     m.fs = FlowsheetBlock(dynamic=False)
 
@@ -33,7 +33,7 @@ def test_iawps95_liquid_phase():
     data_file = os.path.join(path, "h2o_liquid_data.csv")
     df = pandas.read_csv(data_file)
 
-    # Flow rate does nto affect any other property, so keep constant at 1
+    # Flow rate does not affect any other property, so keep constant at 1
     m.fs.state[0].flow_mass.fix(1)
 
     for i, r in df.iterrows():
@@ -44,6 +44,8 @@ def test_iawps95_liquid_phase():
         if not (P == 22 and T > 646.85):  # Skip near the critical point
             m.fs.state[0].pressure.fix(P * units.MPa)
             m.fs.state[0].enth_mass.fix(h * units.kJ / units.kg)
+
+            assert value(m.fs.state[0].phase_frac["Liq"]) == pytest.approx(1, rel=5e-4)
 
             assert value(m.fs.state[0].temperature) == pytest.approx(T, rel=1e-4)
             assert value(m.fs.state[0].dens_mass_phase["Liq"]) == pytest.approx(
@@ -70,7 +72,7 @@ def test_iawps95_liquid_phase():
             # Thermal conductivity does not match to less than 5% error.
 
 
-def test_iawps95_vapor_phase():
+def test_iapws95_vapor_phase():
     m = ConcreteModel()
     m.fs = FlowsheetBlock(dynamic=False)
 
@@ -81,7 +83,7 @@ def test_iawps95_vapor_phase():
     data_file = os.path.join(path, "h2o_vapor_data.csv")
     df = pandas.read_csv(data_file)
 
-    # Flow rate does nto affect any other property, so keep constant at 1
+    # Flow rate does not affect any other property, so keep constant at 1
     m.fs.state[0].flow_mass.fix(1)
 
     for i, r in df.iterrows():
@@ -92,6 +94,8 @@ def test_iawps95_vapor_phase():
         if not (P == 22 and T < 647):  # Skip near the critical point
             m.fs.state[0].pressure.fix(P * units.MPa)
             m.fs.state[0].enth_mass.fix(h * units.kJ / units.kg)
+
+            assert value(m.fs.state[0].phase_frac["Vap"]) == pytest.approx(1, rel=5e-4)
 
             assert value(m.fs.state[0].temperature) == pytest.approx(T, rel=1e-4)
             assert value(m.fs.state[0].dens_mass_phase["Vap"]) == pytest.approx(
@@ -118,7 +122,7 @@ def test_iawps95_vapor_phase():
             # Thermal conductivity does not match to less than 5% error.
 
 
-def test_iawps95_supercritical():
+def test_iapws95_supercritical():
     m = ConcreteModel()
     m.fs = FlowsheetBlock(dynamic=False)
 
@@ -129,7 +133,7 @@ def test_iawps95_supercritical():
     data_file = os.path.join(path, "h2o_supercritical_data.csv")
     df = pandas.read_csv(data_file)
 
-    # Flow rate does nto affect any other property, so keep constant at 1
+    # Flow rate does not affect any other property, so keep constant at 1
     m.fs.state[0].flow_mass.fix(1)
 
     for i, r in df.iterrows():
@@ -165,7 +169,7 @@ def test_iawps95_supercritical():
         # Thermal conductivity does not match to less than 5% error.
 
 
-def test_iawps95_saturated():
+def test_iapws95_saturated():
     m = ConcreteModel()
     m.fs = FlowsheetBlock(dynamic=False)
 
@@ -176,7 +180,7 @@ def test_iawps95_saturated():
     data_file = os.path.join(path, "h2o_saturated_data.csv")
     df = pandas.read_csv(data_file)
 
-    # Flow rate does nto affect any other property, so keep constant at 1
+    # Flow rate does not affect any other property, so keep constant at 1
     m.fs.state[0].flow_mass.fix(1)
 
     for i, r in df.iterrows():
@@ -194,6 +198,8 @@ def test_iawps95_saturated():
         ):  # Skip first point & near critical point
             m.fs.state[0].pressure.fix(P * units.MPa)
             m.fs.state[0].enth_mass.fix(h * units.kJ / units.kg)
+
+            assert value(m.fs.state[0].phase_frac[phase]) == pytest.approx(1, rel=5e-4)
 
             assert value(m.fs.state[0].temperature) == pytest.approx(T, rel=1e-4)
             assert value(m.fs.state[0].dens_mass_phase[phase]) == pytest.approx(
