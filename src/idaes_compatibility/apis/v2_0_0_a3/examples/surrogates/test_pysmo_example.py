@@ -18,12 +18,25 @@ import pandas as pd
 from io import StringIO
 import sys
 
-from pyomo.environ import ConcreteModel, SolverFactory, value, Var,     Constraint, Set, Objective, maximize
+from pyomo.environ import (
+    ConcreteModel,
+    SolverFactory,
+    value,
+    Var,
+    Constraint,
+    Set,
+    Objective,
+    maximize,
+)
 from pyomo.common.timing import TicTocTimer
 
 from idaes.core.surrogate.sampling.data_utils import split_training_validation
 from idaes.core.surrogate.pysmo_surrogate import PysmoPolyTrainer, PysmoSurrogate
-from idaes.core.surrogate.plotting.sm_plotter import surrogate_scatter2D, surrogate_parity, surrogate_residual
+from idaes.core.surrogate.plotting.sm_plotter import (
+    surrogate_scatter2D,
+    surrogate_parity,
+    surrogate_residual,
+)
 from idaes.core.surrogate.surrogate_block import SurrogateBlock
 from idaes.core import FlowsheetBlock
 from idaes.core.util.convergence.convergence_base import _run_ipopt_with_stats
@@ -37,8 +50,8 @@ from pyomo.common.tempfiles import TempfileManager
 def test_example(mock_show):
     np.set_printoptions(precision=6, suppress=True)
 
-    csv_data = pd.read_csv(r'reformer-data.csv') # 2800 data points
-    data = csv_data.sample(n = 100) # randomly sample points for training/validation
+    csv_data = pd.read_csv(r"reformer-data.csv")  # 2800 data points
+    data = csv_data.sample(n=100)  # randomly sample points for training/validation
     input_data = data.iloc[:, :2]
     output_data = data.iloc[:, 2:]
 
@@ -46,16 +59,20 @@ def test_example(mock_show):
     output_labels = list(output_data.columns)
 
     n_data = data[input_labels[0]].size
-    data_training, data_validation = split_training_validation(data, 0.8, seed=n_data)  # seed=100
+    data_training, data_validation = split_training_validation(
+        data, 0.8, seed=n_data
+    )  # seed=100
 
     stream = StringIO()
     oldstdout = sys.stdout
     sys.stdout = stream
 
     # Create PySMO trainer object
-    trainer = PysmoPolyTrainer(input_labels=input_labels,
-                               output_labels=output_labels,
-                               training_dataframe=data_training)
+    trainer = PysmoPolyTrainer(
+        input_labels=input_labels,
+        output_labels=output_labels,
+        training_dataframe=data_training,
+    )
 
     # Set PySMO options
     trainer.config.maximum_polynomial_order = 6
@@ -68,8 +85,9 @@ def test_example(mock_show):
 
     # create callable surrogate object
     xmin, xmax = [0.1, 0.8], [0.8, 1.2]
-    input_bounds = {input_labels[i]: (xmin[i], xmax[i])
-                    for i in range(len(input_labels))}
+    input_bounds = {
+        input_labels[i]: (xmin[i], xmax[i]) for i in range(len(input_labels))
+    }
     poly_surr = PysmoSurrogate(poly_train, input_labels, output_labels, input_bounds)
 
     with TempfileManager as tf:
@@ -81,12 +99,12 @@ def test_example(mock_show):
         sys.stdout = oldstdout
 
         # display first 50 lines and last 50 lines of output
-        celloutput = stream.getvalue().split('\n')
+        celloutput = stream.getvalue().split("\n")
         for line in celloutput[:50]:
             print(line)
-        print('.')
-        print('.')
-        print('.')
+        print(".")
+        print(".")
+        print(".")
         for line in celloutput[-50:]:
             print(line)
 
@@ -111,8 +129,12 @@ def test_example(mock_show):
         m.fs = FlowsheetBlock(dynamic=False)
 
         # create flowsheet input variables
-        m.fs.bypass_frac = Var(initialize=0.80, bounds=[0.1, 0.8], doc='natural gas bypass fraction')
-        m.fs.ng_steam_ratio = Var(initialize=0.80, bounds=[0.8, 1.2], doc='natural gas to steam ratio')
+        m.fs.bypass_frac = Var(
+            initialize=0.80, bounds=[0.1, 0.8], doc="natural gas bypass fraction"
+        )
+        m.fs.ng_steam_ratio = Var(
+            initialize=0.80, bounds=[0.8, 1.2], doc="natural gas to steam ratio"
+        )
 
         # create flowsheet output variables
         m.fs.steam_flowrate = Var(initialize=0.2, doc="steam flowrate")
@@ -131,8 +153,21 @@ def test_example(mock_show):
 
         # create input and output variable object lists for flowsheet
         inputs = [m.fs.bypass_frac, m.fs.ng_steam_ratio]
-        outputs = [m.fs.steam_flowrate, m.fs.reformer_duty, m.fs.AR, m.fs.C2H6, m.fs.C4H10,
-                   m.fs.C3H8, m.fs.CH4, m.fs.CO, m.fs.CO2, m.fs.H2, m.fs.H2O, m.fs.N2, m.fs.O2]
+        outputs = [
+            m.fs.steam_flowrate,
+            m.fs.reformer_duty,
+            m.fs.AR,
+            m.fs.C2H6,
+            m.fs.C4H10,
+            m.fs.C3H8,
+            m.fs.CH4,
+            m.fs.CO,
+            m.fs.CO2,
+            m.fs.H2,
+            m.fs.H2O,
+            m.fs.N2,
+            m.fs.O2,
+        ]
 
         # capture long output (not required to use surrogate API)
         stream = StringIO()
@@ -150,7 +185,7 @@ def test_example(mock_show):
     m.fs.bypass_frac.fix(0.5)
     m.fs.ng_steam_ratio.fix(1)
 
-    solver = SolverFactory('ipopt')
+    solver = SolverFactory("ipopt")
     [status_obj, solved, iters, time] = _run_ipopt_with_stats(m, solver)
 
     print("Model status: ", status_obj)
@@ -182,14 +217,14 @@ def test_example(mock_show):
     # solve the model
     tmr = TicTocTimer()
     status = solver.solve(m, tee=True)
-    solve_time = tmr.toc('solve')
+    solve_time = tmr.toc("solve")
 
     # print and check results
-    assert abs(value(m.fs.H2)-0.33) <= 0.01
-    assert value(m.fs.N2 <= 0.4+1e-8)
-    print('Model status: ', status)
-    print('Solve time: ', solve_time)
+    assert abs(value(m.fs.H2) - 0.33) <= 0.01
+    assert value(m.fs.N2 <= 0.4 + 1e-8)
+    print("Model status: ", status)
+    print("Solve time: ", solve_time)
     for var in inputs:
-        print(var.name,': ', value(var))
+        print(var.name, ": ", value(var))
     for var in outputs:
-        print(var.name,': ', value(var))
+        print(var.name, ": ", value(var))
