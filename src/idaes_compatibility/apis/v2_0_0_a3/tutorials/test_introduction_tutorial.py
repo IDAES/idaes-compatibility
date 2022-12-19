@@ -31,8 +31,13 @@ from idaes.models.unit_models.pressure_changer import ThermodynamicAssumption
 
 from idaes.core.util.model_statistics import degrees_of_freedom
 
+from unittest.mock import patch
+import matplotlib.pyplot as plt
+from pyomo.common.tempfiles import TempfileManager
 
-def test_tutorial():
+
+@patch("matplotlib.pyplot.show")
+def test_tutorial(mock_show):
     check_count = 0
     # -----------------------------------------------------------------------------
     # Test available solvers
@@ -119,7 +124,7 @@ def test_tutorial():
     plt.xlabel("x")
     plt.ylabel("y")
     plt.legend(["data"])
-    # plt.show()
+    plt.show()
 
     x = list(np.linspace(0, 2 * math.pi, 100))
     # Todo: create the list for y
@@ -130,11 +135,14 @@ def test_tutorial():
     plt.title("Trig: sin function")
     plt.xlabel("x in radians")
     plt.ylabel("sin(x)")
-    # plt.show()
+    plt.show()
 
     df_sin = pd.DataFrame({"x": x, "sin(x) (radians)": y})
     print(df_sin)
-    # df_sin.to_csv('sin_data.csv')
+    with TempfileManager as tf:
+        # save model to JSON
+        fname = tf.create_tempfile(suffix=".csv")
+        df_sin.to_csv(fname)
 
     model = ConcreteModel()
     model.x = Var()

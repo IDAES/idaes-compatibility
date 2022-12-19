@@ -29,8 +29,12 @@ from idaes.core.util.model_statistics import degrees_of_freedom
 
 from .workshoptools import solve_successful
 
+from unittest.mock import patch
+import matplotlib.pyplot as plt
 
-def test_tutorial():
+
+@patch("matplotlib.pyplot.show")
+def test_tutorial(mock_show):
     m = ConcreteModel()
     m.fs = FlowsheetBlock(dynamic=False)
     m.pprint()
@@ -141,7 +145,7 @@ def test_tutorial():
     plt.grid()
     plt.xlabel("Heat Duty [J]")
     plt.ylabel("Vapor Fraction [-]")
-    # plt.show()
+    plt.show()
 
     # Todo: generate a figure of heat duty vs. mole fraction of Benzene in the vapor
     Q = []
@@ -173,7 +177,7 @@ def test_tutorial():
     plt.grid()
     plt.xlabel("Heat Duty [J]")
     plt.ylabel("Vapor Benzene Mole Fraction [-]")
-    # plt.show()
+    plt.show()
 
     # re-initialize the model - this may or may not be required depending on current state but safe to initialize
     m.fs.flash.heat_duty.fix(0)
