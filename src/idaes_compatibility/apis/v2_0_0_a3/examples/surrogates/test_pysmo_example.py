@@ -46,11 +46,14 @@ import matplotlib.pyplot as plt
 from pyomo.common.tempfiles import TempfileManager
 
 
+path = os.path.dirname(os.path.abspath(__file__))
+data_file = os.path.join(path, "reformer-data.csv")
+
 @patch("matplotlib.pyplot.show")
 def test_example(mock_show):
     np.set_printoptions(precision=6, suppress=True)
 
-    csv_data = pd.read_csv(r"reformer-data.csv")  # 2800 data points
+    csv_data = pd.read_csv(data_file)  # 2800 data points
     data = csv_data.sample(n=100)  # randomly sample points for training/validation
     input_data = data.iloc[:, :2]
     output_data = data.iloc[:, 2:]
