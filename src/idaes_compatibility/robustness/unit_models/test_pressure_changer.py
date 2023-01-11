@@ -77,6 +77,14 @@ class IsothermalPressureChangerConvergenceEvaluation(cb.ConvergenceEvaluation):
             distribution="uniform",
         )
 
+        s.add_sampled_input(
+            name="Pressure_Change",
+            pyomo_path="fs.pc.deltaP[0]",
+            lower=-5e5,
+            upper=5e5,
+            distribution="uniform",
+        )
+
         # TODO: Add deltaP as an input?
         return s
 
@@ -117,6 +125,9 @@ class IsothermalPressureChangerConvergenceEvaluation(cb.ConvergenceEvaluation):
 
 def test_isothermal_pressure_changer_robustness():
     ceval = IsothermalPressureChangerConvergenceEvaluation()
+
+    # Uncomment to create new baseline file
+    # ceval.write_baseline_file(fname, 100)
 
     solves, iters, restoration, regularization = ceval.compare_to_baseline(fname)
 
