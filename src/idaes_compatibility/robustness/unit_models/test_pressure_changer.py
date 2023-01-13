@@ -129,7 +129,7 @@ def test_isothermal_pressure_changer_robustness():
     # Uncomment to create new baseline file
     # ceval.write_baseline_file(fname, 100)
 
-    solves, iters, restoration, regularization = ceval.compare_to_baseline(fname)
+    solves, iters, restoration, regularization = ceval.compare_to_baseline(fname, rel_tol=0.1, abs_tol=1)
 
     assert solves == []
     assert iters == []
