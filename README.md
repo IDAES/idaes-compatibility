@@ -27,6 +27,6 @@ Robustness tests are intended to ensure that models within the IDAES toolset can
 **NOTE**: this assumes that the version of IDAES being tested for backward compatibility is already installed in the current environment.
 
 ```sh
-pip install "git+https://github.com/IDAES/idaes-compatibility@main
+pip install "git+https://github.com/IDAES/idaes-compatibility@main"
 pytest --pyargs idaes_compatibility
 ```
