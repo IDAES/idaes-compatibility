@@ -9,12 +9,12 @@ build-backend = "setuptools.build_meta"
     name = "idaes-compatibility"
     description = "IDAES Backward Compatibility Tests"
     readme = "README.md"
-    version = "2.0.0a1"
+    version = "0.23.7"
     license = {text="BSD"}
     requires-python = ">=3.7"
     authors = [
         {name="The IDAES Project"},
-        {name="Andrew Lee", email="andrew.lee@netl.doe.gov"}
+        {name="Andrew Lee", email="andrew.lee@netl.doe.gov"},
     ]
     classifiers = [
             "Development Status :: 3 - Alpha",
@@ -37,33 +37,14 @@ build-backend = "setuptools.build_meta"
             "Topic :: Software Development :: Libraries :: Python Modules",
     ]
     dependencies = [
-        "idaes-pse @ git+https://github.com/IDAES/idaes-pse",
-        "pytest~=7.1.3",
-        "Markdown~=3.4.1",
-        "tkhtmlview==0.1.1.post5",
-        "matplotlib~=3.6.0",
-        "numpy~=1.23.3",
-        "pandas",
-        "setuptools~=63.4.1",
-        "pyomo~=6.4.2",
-        "pyyaml~=6.0",
-        "PySimpleGUI~=4.60.4",
-        "pecos>=0.2.0",
-        # used by notebooks in Examples/SurrMod/FlowsheetOptimization
-        # pinning to latest stable version as of 9/29/2022
-        "tensorflow==2.10.0",
-        "protobuf==3.19.5"
+        "idaes-pse",
+        "pytest>=7",
     ]
     keywords = ["IDAES", "energy systems", "chemical engineering", "process modeling"]
 
 [project.optional-dependencies]
 dev = [
-    # parallel pytest
-    "pytest-xdist ~= 3.0.2",
-    # pytest reporting
-    "pytest-reportlog ~= 0.1.2",
-    # For jupyter notebook testing
-    "black[jupyter] ~= 22.8.0",
+    "black ~= 22.8.0",
     # For adding copyright headers (see addheader.yml and the readme)
     "addheader >= 0.3.0"
 ]
@@ -72,39 +53,6 @@ dev = [
 github = "https://github.com/idaes/idaes-compatibility"
 issues = "https://github.com/idaes/idaes-compatibility/issues"
 
-[project.scripts]
-idaesx = "idaes-compatibility.build:main"
-
-[tool.setuptools]
-include-package-data = true
-zip-safe = false
-
-[tool.setuptools.packages.find]
-include = ["idaes-compatibility"]
-
-[tool.setuptools.package-data]
-idaes-compatibility = [
-    "*.template",
-    "*.json",
-    "*.yaml",
-    "*.svg",
-    "*.png",
-    "*.jpg",
-    "*.csv",
-    "*.ipynb",
-    "*.txt",
-    "*.js",
-    "*.css",
-    "*.html",
-    "*.json.gz",
-    "*.dat",
-    "*.h5",
-    "*.pb",  # for Keras Surrogate folder
-    "*.data-00000-of-00001",  # for Keras Surrogate folder
-    "*.index",  # for Keras Surrogate folder
-    "*.trc",
-    "*.xlsx",  # idaes/dmf/tests/data_files - tabular import test files
-]
 
 [tool.pytest.ini_options]
 minversion = "7.0"
