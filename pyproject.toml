@@ -1,15 +1,18 @@
 [build-system]
 requires = [
     "setuptools>=61",
+    "setuptools_scm",
     "wheel"
 ]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
 
 [project]
     name = "idaes-compatibility"
     description = "IDAES Backward Compatibility Tests"
     readme = "README.md"
-    version = "0.23.7"
+    dynamic = ["version"]
     license = {text="BSD"}
     requires-python = ">=3.7"
     authors = [
