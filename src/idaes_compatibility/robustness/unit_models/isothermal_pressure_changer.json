@@ -37,839 +37,839 @@
    "seed": null,
    "samples": {
       "Sample-1": {
-         "Inlet_Flowrate": 100549.40307252867,
-         "Inlet_Pressure": 195858066.0462243,
-         "Inlet_Enthalpy": 348717.9315359152,
-         "Pressure_Change": -375389.72225090297,
+         "Inlet_Flowrate": 36121.98091239472,
+         "Inlet_Pressure": 54530740.253516085,
+         "Inlet_Enthalpy": 3101880.894424519,
+         "Pressure_Change": 457705.25199297955,
          "_name": "Sample-1"
       },
       "Sample-2": {
-         "Inlet_Flowrate": 887290.9230123914,
-         "Inlet_Pressure": 17015312.375877924,
-         "Inlet_Enthalpy": 1239561.8499324222,
-         "Pressure_Change": 153821.8396866658,
+         "Inlet_Flowrate": 140928.12390499454,
+         "Inlet_Pressure": 63333140.38758656,
+         "Inlet_Enthalpy": 4003782.8895591674,
+         "Pressure_Change": 224182.96641085378,
          "_name": "Sample-2"
       },
       "Sample-3": {
-         "Inlet_Flowrate": 451451.98627769994,
-         "Inlet_Pressure": 198489395.7187824,
-         "Inlet_Enthalpy": 2784934.796546435,
-         "Pressure_Change": -15765.29198519449,
+         "Inlet_Flowrate": 670020.7538546968,
+         "Inlet_Pressure": 36685458.23979033,
+         "Inlet_Enthalpy": 3279869.082431293,
+         "Pressure_Change": 11640.563032314181,
          "_name": "Sample-3"
       },
       "Sample-4": {
-         "Inlet_Flowrate": 262524.8951828162,
-         "Inlet_Pressure": 50991507.29697403,
-         "Inlet_Enthalpy": 4180367.589361034,
-         "Pressure_Change": -30597.85506585613,
+         "Inlet_Flowrate": 644863.7969072261,
+         "Inlet_Pressure": 161028303.3904177,
+         "Inlet_Enthalpy": 36024.131182524085,
+         "Pressure_Change": 72839.27147630975,
          "_name": "Sample-4"
       },
       "Sample-5": {
-         "Inlet_Flowrate": 287837.8973977362,
-         "Inlet_Pressure": 145025111.61625817,
-         "Inlet_Enthalpy": 2102973.3518187553,
-         "Pressure_Change": 171193.25187156152,
+         "Inlet_Flowrate": 137893.9741661717,
+         "Inlet_Pressure": 197977079.21987298,
+         "Inlet_Enthalpy": 1854190.921900817,
+         "Pressure_Change": -314653.17580334906,
          "_name": "Sample-5"
       },
       "Sample-6": {
-         "Inlet_Flowrate": 677161.5228725345,
-         "Inlet_Pressure": 21620252.13312162,
-         "Inlet_Enthalpy": 1395515.100251567,
-         "Pressure_Change": 270137.38298871147,
+         "Inlet_Flowrate": 595367.6007883184,
+         "Inlet_Pressure": 178544603.30722955,
+         "Inlet_Enthalpy": 354619.31899508863,
+         "Pressure_Change": 330689.5341132063,
          "_name": "Sample-6"
       },
       "Sample-7": {
-         "Inlet_Flowrate": 908141.1478494273,
-         "Inlet_Pressure": 126501346.51244535,
-         "Inlet_Enthalpy": 2698667.876940588,
-         "Pressure_Change": -196496.97323012317,
+         "Inlet_Flowrate": 995913.8063901522,
+         "Inlet_Pressure": 131693778.11166002,
+         "Inlet_Enthalpy": 3875008.591906987,
+         "Pressure_Change": 230533.22330633935,
          "_name": "Sample-7"
       },
       "Sample-8": {
-         "Inlet_Flowrate": 419993.25738097396,
-         "Inlet_Pressure": 94094893.79924943,
-         "Inlet_Enthalpy": 1265322.1320655562,
-         "Pressure_Change": -269626.76015595254,
+         "Inlet_Flowrate": 541236.7954792447,
+         "Inlet_Pressure": 63826007.73850222,
+         "Inlet_Enthalpy": 3264312.1952437074,
+         "Pressure_Change": -120514.64059481764,
          "_name": "Sample-8"
       },
       "Sample-9": {
-         "Inlet_Flowrate": 650067.8535340987,
-         "Inlet_Pressure": 6033723.014404795,
-         "Inlet_Enthalpy": 524585.1121776206,
-         "Pressure_Change": -470781.44162481016,
+         "Inlet_Flowrate": 245597.73851631733,
+         "Inlet_Pressure": 28969598.254889496,
+         "Inlet_Enthalpy": 815586.0633308991,
+         "Pressure_Change": 175239.1187131435,
          "_name": "Sample-9"
       },
       "Sample-10": {
-         "Inlet_Flowrate": 505197.5549863645,
-         "Inlet_Pressure": 143726669.92775396,
-         "Inlet_Enthalpy": 3952435.2447211556,
-         "Pressure_Change": 63024.453397667035,
+         "Inlet_Flowrate": 347871.511035529,
+         "Inlet_Pressure": 48641353.505170785,
+         "Inlet_Enthalpy": 3690090.9850685764,
+         "Pressure_Change": 386816.11820038036,
          "_name": "Sample-10"
       },
       "Sample-11": {
-         "Inlet_Flowrate": 916411.7106082403,
-         "Inlet_Pressure": 28923721.894314125,
-         "Inlet_Enthalpy": 4067375.7313946947,
-         "Pressure_Change": -134502.90222737438,
+         "Inlet_Flowrate": 887464.3288205445,
+         "Inlet_Pressure": 184269356.30257535,
+         "Inlet_Enthalpy": 128451.6905522619,
+         "Pressure_Change": 359777.96947293344,
          "_name": "Sample-11"
       },
       "Sample-12": {
-         "Inlet_Flowrate": 985244.0866097717,
-         "Inlet_Pressure": 145262355.1584555,
-         "Inlet_Enthalpy": 727950.1350213425,
-         "Pressure_Change": 245615.17110124603,
+         "Inlet_Flowrate": 815938.5713068538,
+         "Inlet_Pressure": 144294840.57726622,
+         "Inlet_Enthalpy": 1586550.3942207294,
+         "Pressure_Change": 271605.9974843112,
          "_name": "Sample-12"
       },
       "Sample-13": {
-         "Inlet_Flowrate": 822338.766092394,
-         "Inlet_Pressure": 29208102.297560006,
-         "Inlet_Enthalpy": 1551852.0000272237,
-         "Pressure_Change": 147111.58579276234,
+         "Inlet_Flowrate": 592530.1730459698,
+         "Inlet_Pressure": 51575362.863938265,
+         "Inlet_Enthalpy": 1889485.6482785388,
+         "Pressure_Change": 269158.260844807,
          "_name": "Sample-13"
       },
       "Sample-14": {
-         "Inlet_Flowrate": 947410.1017168628,
-         "Inlet_Pressure": 117674602.62552123,
-         "Inlet_Enthalpy": 2548314.0464789756,
-         "Pressure_Change": 478974.2108520026,
+         "Inlet_Flowrate": 80896.43918585072,
+         "Inlet_Pressure": 134956091.12439907,
+         "Inlet_Enthalpy": 138487.60752357426,
+         "Pressure_Change": 406097.39761700877,
          "_name": "Sample-14"
       },
       "Sample-15": {
-         "Inlet_Flowrate": 860637.8510025011,
-         "Inlet_Pressure": 155146865.83937338,
-         "Inlet_Enthalpy": 2453842.3957893625,
-         "Pressure_Change": 233398.15078932443,
+         "Inlet_Flowrate": 320995.7443483409,
+         "Inlet_Pressure": 91527579.83072942,
+         "Inlet_Enthalpy": 4053453.2999047865,
+         "Pressure_Change": -206251.65066350746,
          "_name": "Sample-15"
       },
       "Sample-16": {
-         "Inlet_Flowrate": 7447.740682920149,
-         "Inlet_Pressure": 9132833.95063179,
-         "Inlet_Enthalpy": 2463634.0674140695,
-         "Pressure_Change": -70826.46749968635,
+         "Inlet_Flowrate": 941126.0438968503,
+         "Inlet_Pressure": 141117484.9779336,
+         "Inlet_Enthalpy": 1456790.1105481249,
+         "Pressure_Change": 369776.4297025221,
          "_name": "Sample-16"
       },
       "Sample-17": {
-         "Inlet_Flowrate": 72069.74563115838,
-         "Inlet_Pressure": 103576328.17832969,
-         "Inlet_Enthalpy": 1049129.090892352,
-         "Pressure_Change": 38251.91901493666,
+         "Inlet_Flowrate": 350623.70460260817,
+         "Inlet_Pressure": 131526980.08013837,
+         "Inlet_Enthalpy": 1496926.3275177635,
+         "Pressure_Change": 364203.3525540191,
          "_name": "Sample-17"
       },
       "Sample-18": {
-         "Inlet_Flowrate": 821015.168756813,
-         "Inlet_Pressure": 167588103.3410452,
-         "Inlet_Enthalpy": 1527039.2700603807,
-         "Pressure_Change": -209953.5430816076,
+         "Inlet_Flowrate": 177955.03047959917,
+         "Inlet_Pressure": 157748909.92489395,
+         "Inlet_Enthalpy": 4342692.925528478,
+         "Pressure_Change": 132750.23256553127,
          "_name": "Sample-18"
       },
       "Sample-19": {
-         "Inlet_Flowrate": 756434.1893396276,
-         "Inlet_Pressure": 124227082.3589964,
-         "Inlet_Enthalpy": 1426433.0321508017,
-         "Pressure_Change": 300328.7614441768,
+         "Inlet_Flowrate": 396109.3612456254,
+         "Inlet_Pressure": 37479027.72995851,
+         "Inlet_Enthalpy": 2248371.982380001,
+         "Pressure_Change": -182168.94579072105,
          "_name": "Sample-19"
       },
       "Sample-20": {
-         "Inlet_Flowrate": 125051.42602256929,
-         "Inlet_Pressure": 149382518.4975919,
-         "Inlet_Enthalpy": 594046.7181064184,
-         "Pressure_Change": -368084.02147257305,
+         "Inlet_Flowrate": 49620.233823023154,
+         "Inlet_Pressure": 73617581.58780879,
+         "Inlet_Enthalpy": 184602.478473349,
+         "Pressure_Change": 244365.63532357523,
          "_name": "Sample-20"
       },
       "Sample-21": {
-         "Inlet_Flowrate": 420606.89624613937,
-         "Inlet_Pressure": 165129294.79968855,
-         "Inlet_Enthalpy": 3577506.910204296,
-         "Pressure_Change": 354482.2032226804,
+         "Inlet_Flowrate": 369702.7738022379,
+         "Inlet_Pressure": 45542509.62735523,
+         "Inlet_Enthalpy": 3914906.757510373,
+         "Pressure_Change": -76686.84463736706,
          "_name": "Sample-21"
       },
       "Sample-22": {
-         "Inlet_Flowrate": 889857.5209972082,
-         "Inlet_Pressure": 102889879.44861756,
-         "Inlet_Enthalpy": 1466500.9918111628,
-         "Pressure_Change": 127160.12369771127,
+         "Inlet_Flowrate": 803069.3703810417,
+         "Inlet_Pressure": 179963322.7946527,
+         "Inlet_Enthalpy": 3288343.5937531046,
+         "Pressure_Change": 295937.42051313736,
          "_name": "Sample-22"
       },
       "Sample-23": {
-         "Inlet_Flowrate": 57809.21111044668,
-         "Inlet_Pressure": 42088709.03196907,
-         "Inlet_Enthalpy": 1525354.6791679454,
-         "Pressure_Change": -286091.96338648547,
+         "Inlet_Flowrate": 374480.1229568126,
+         "Inlet_Pressure": 11014718.7629236,
+         "Inlet_Enthalpy": 1613130.799544288,
+         "Pressure_Change": -468775.51376075856,
          "_name": "Sample-23"
       },
       "Sample-24": {
-         "Inlet_Flowrate": 984248.7567174259,
-         "Inlet_Pressure": 151184345.75767225,
-         "Inlet_Enthalpy": 3828879.4645142537,
-         "Pressure_Change": -309924.9352157264,
+         "Inlet_Flowrate": 90734.35045079258,
+         "Inlet_Pressure": 173924419.1910537,
+         "Inlet_Enthalpy": 4037775.1501067868,
+         "Pressure_Change": -42906.457960001484,
          "_name": "Sample-24"
       },
       "Sample-25": {
-         "Inlet_Flowrate": 996502.5282836248,
-         "Inlet_Pressure": 158645695.60168102,
-         "Inlet_Enthalpy": 1737830.8051194095,
-         "Pressure_Change": 405039.2123441318,
+         "Inlet_Flowrate": 78300.61439424385,
+         "Inlet_Pressure": 61988391.41925976,
+         "Inlet_Enthalpy": 273651.5537790237,
+         "Pressure_Change": -123107.53154137352,
          "_name": "Sample-25"
       },
       "Sample-26": {
-         "Inlet_Flowrate": 518537.4850264969,
-         "Inlet_Pressure": 126834037.58209212,
-         "Inlet_Enthalpy": 1111673.0072056202,
-         "Pressure_Change": -245346.32962580983,
+         "Inlet_Flowrate": 870240.0014763311,
+         "Inlet_Pressure": 88859205.20018594,
+         "Inlet_Enthalpy": 413997.31496027886,
+         "Pressure_Change": 164551.68803113268,
          "_name": "Sample-26"
       },
       "Sample-27": {
-         "Inlet_Flowrate": 824997.8107460287,
-         "Inlet_Pressure": 117317900.3988166,
-         "Inlet_Enthalpy": 3633798.2291939086,
-         "Pressure_Change": 276191.4526114778,
+         "Inlet_Flowrate": 188045.7373867927,
+         "Inlet_Pressure": 18122923.684292626,
+         "Inlet_Enthalpy": 4072316.8631437174,
+         "Pressure_Change": 452681.06242878956,
          "_name": "Sample-27"
       },
       "Sample-28": {
-         "Inlet_Flowrate": 852092.7679777383,
-         "Inlet_Pressure": 79538274.63986972,
-         "Inlet_Enthalpy": 1007967.8127780221,
-         "Pressure_Change": 436725.08246826567,
+         "Inlet_Flowrate": 796645.5338272534,
+         "Inlet_Pressure": 79477954.47034325,
+         "Inlet_Enthalpy": 1092784.7567463515,
+         "Pressure_Change": -23483.023593608348,
          "_name": "Sample-28"
       },
       "Sample-29": {
-         "Inlet_Flowrate": 676491.939846652,
-         "Inlet_Pressure": 48660830.80338601,
-         "Inlet_Enthalpy": 1504888.0960645494,
-         "Pressure_Change": -117885.629354464,
+         "Inlet_Flowrate": 284185.7484127631,
+         "Inlet_Pressure": 87334677.04048398,
+         "Inlet_Enthalpy": 1135479.929382846,
+         "Pressure_Change": 110501.48489498312,
          "_name": "Sample-29"
       },
       "Sample-30": {
-         "Inlet_Flowrate": 88771.07869892448,
-         "Inlet_Pressure": 62908107.39345879,
-         "Inlet_Enthalpy": 2203422.4899954405,
-         "Pressure_Change": -194239.76309532434,
+         "Inlet_Flowrate": 993692.2800459936,
+         "Inlet_Pressure": 100608060.67494874,
+         "Inlet_Enthalpy": 2248418.6262299605,
+         "Pressure_Change": -187882.50879999914,
          "_name": "Sample-30"
       },
       "Sample-31": {
-         "Inlet_Flowrate": 84674.19791787177,
-         "Inlet_Pressure": 58878994.35538764,
-         "Inlet_Enthalpy": 1967638.1722494415,
-         "Pressure_Change": 148739.43624186947,
+         "Inlet_Flowrate": 769460.1572251659,
+         "Inlet_Pressure": 127857466.98338152,
+         "Inlet_Enthalpy": 2284482.0770114614,
+         "Pressure_Change": 343127.4646565401,
          "_name": "Sample-31"
       },
       "Sample-32": {
-         "Inlet_Flowrate": 863277.791303978,
-         "Inlet_Pressure": 136405230.7018179,
-         "Inlet_Enthalpy": 2131607.291827125,
-         "Pressure_Change": -104315.69780572725,
+         "Inlet_Flowrate": 741429.9699760501,
+         "Inlet_Pressure": 98211864.08372927,
+         "Inlet_Enthalpy": 325392.49231614853,
+         "Pressure_Change": 26307.21864454134,
          "_name": "Sample-32"
       },
       "Sample-33": {
-         "Inlet_Flowrate": 164019.92135186828,
-         "Inlet_Pressure": 104977915.17421292,
-         "Inlet_Enthalpy": 4199586.929409891,
-         "Pressure_Change": 440559.22319116467,
+         "Inlet_Flowrate": 863391.2177915552,
+         "Inlet_Pressure": 197577553.90454772,
+         "Inlet_Enthalpy": 3694555.349207122,
+         "Pressure_Change": -461609.13384204207,
          "_name": "Sample-33"
       },
       "Sample-34": {
-         "Inlet_Flowrate": 322565.807988111,
-         "Inlet_Pressure": 119498230.06340249,
-         "Inlet_Enthalpy": 106333.31403890143,
-         "Pressure_Change": -83165.66594102414,
+         "Inlet_Flowrate": 358504.83423230593,
+         "Inlet_Pressure": 31850456.110894598,
+         "Inlet_Enthalpy": 1301562.8484285844,
+         "Pressure_Change": 286398.3258996891,
          "_name": "Sample-34"
       },
       "Sample-35": {
-         "Inlet_Flowrate": 143151.65455567662,
-         "Inlet_Pressure": 38591708.6542435,
-         "Inlet_Enthalpy": 4256391.882084222,
-         "Pressure_Change": 304771.7882287159,
+         "Inlet_Flowrate": 34512.593881424495,
+         "Inlet_Pressure": 91696734.2014142,
+         "Inlet_Enthalpy": 3064531.725537458,
+         "Pressure_Change": -357096.0371320746,
          "_name": "Sample-35"
       },
       "Sample-36": {
-         "Inlet_Flowrate": 362368.99031722144,
-         "Inlet_Pressure": 24348934.26194335,
-         "Inlet_Enthalpy": 3678752.643496964,
-         "Pressure_Change": -33037.447732462955,
+         "Inlet_Flowrate": 509732.63599687355,
+         "Inlet_Pressure": 4093156.2080688137,
+         "Inlet_Enthalpy": 2046973.8032542798,
+         "Pressure_Change": 204287.88441860396,
          "_name": "Sample-36"
       },
       "Sample-37": {
-         "Inlet_Flowrate": 672387.2733805057,
-         "Inlet_Pressure": 50090118.20890154,
-         "Inlet_Enthalpy": 1909929.1167039415,
-         "Pressure_Change": -325000.941347344,
+         "Inlet_Flowrate": 213724.8362920233,
+         "Inlet_Pressure": 22823171.68021708,
+         "Inlet_Enthalpy": 2456383.2091830075,
+         "Pressure_Change": 232274.34984886716,
          "_name": "Sample-37"
       },
       "Sample-38": {
-         "Inlet_Flowrate": 307636.89090549544,
-         "Inlet_Pressure": 136242206.71418533,
-         "Inlet_Enthalpy": 4233754.319935681,
-         "Pressure_Change": 306582.33632709866,
+         "Inlet_Flowrate": 541821.0629644172,
+         "Inlet_Pressure": 157106718.61319098,
+         "Inlet_Enthalpy": 2921725.8576317993,
+         "Pressure_Change": 107658.15126338962,
          "_name": "Sample-38"
       },
       "Sample-39": {
-         "Inlet_Flowrate": 766130.5921100256,
-         "Inlet_Pressure": 88887336.31095207,
-         "Inlet_Enthalpy": 515708.66160376347,
-         "Pressure_Change": 115504.94583316473,
+         "Inlet_Flowrate": 541478.8282139708,
+         "Inlet_Pressure": 61172668.50922433,
+         "Inlet_Enthalpy": 3548071.2904860447,
+         "Pressure_Change": 107527.73993320984,
          "_name": "Sample-39"
       },
       "Sample-40": {
-         "Inlet_Flowrate": 748805.1907665343,
-         "Inlet_Pressure": 103908629.24879864,
-         "Inlet_Enthalpy": 1788926.8833079399,
-         "Pressure_Change": -390471.47633072344,
+         "Inlet_Flowrate": 356017.437292387,
+         "Inlet_Pressure": 73586449.32426295,
+         "Inlet_Enthalpy": 276090.7719023668,
+         "Pressure_Change": -261356.73770803947,
          "_name": "Sample-40"
       },
       "Sample-41": {
-         "Inlet_Flowrate": 937387.670767504,
-         "Inlet_Pressure": 2148822.7937041693,
-         "Inlet_Enthalpy": 1774728.0619088486,
-         "Pressure_Change": -369668.14804020955,
+         "Inlet_Flowrate": 498824.79319605517,
+         "Inlet_Pressure": 148266834.37823004,
+         "Inlet_Enthalpy": 4218592.6741276095,
+         "Pressure_Change": 95712.80550964864,
          "_name": "Sample-41"
       },
       "Sample-42": {
-         "Inlet_Flowrate": 811161.5477148143,
-         "Inlet_Pressure": 166742137.07007077,
-         "Inlet_Enthalpy": 1805522.7435137744,
-         "Pressure_Change": 490641.4167178734,
+         "Inlet_Flowrate": 381664.6354969054,
+         "Inlet_Pressure": 6971994.773766819,
+         "Inlet_Enthalpy": 702981.4869610068,
+         "Pressure_Change": 63634.991828311,
          "_name": "Sample-42"
       },
       "Sample-43": {
-         "Inlet_Flowrate": 530882.683479635,
-         "Inlet_Pressure": 198032715.62477615,
-         "Inlet_Enthalpy": 4182391.1995418994,
-         "Pressure_Change": 210733.83316570346,
+         "Inlet_Flowrate": 974644.5770036455,
+         "Inlet_Pressure": 128919599.7265912,
+         "Inlet_Enthalpy": 3182205.2557831877,
+         "Pressure_Change": 311423.73576634354,
          "_name": "Sample-43"
       },
       "Sample-44": {
-         "Inlet_Flowrate": 662973.2262441856,
-         "Inlet_Pressure": 186294137.78162214,
-         "Inlet_Enthalpy": 2239768.0374890086,
-         "Pressure_Change": 42705.860939412145,
+         "Inlet_Flowrate": 928062.4339234537,
+         "Inlet_Pressure": 138797590.34685066,
+         "Inlet_Enthalpy": 2779904.5374212745,
+         "Pressure_Change": 27831.44818508753,
          "_name": "Sample-44"
       },
       "Sample-45": {
-         "Inlet_Flowrate": 681202.8715681962,
-         "Inlet_Pressure": 107520889.37869951,
-         "Inlet_Enthalpy": 3588648.6970239216,
-         "Pressure_Change": 430017.31788349,
+         "Inlet_Flowrate": 563937.0332218582,
+         "Inlet_Pressure": 53695309.30311692,
+         "Inlet_Enthalpy": 1763899.3624543685,
+         "Pressure_Change": 139784.56865850592,
          "_name": "Sample-45"
       },
       "Sample-46": {
-         "Inlet_Flowrate": 363302.7251839952,
-         "Inlet_Pressure": 146617683.27130625,
-         "Inlet_Enthalpy": 802233.5943642146,
-         "Pressure_Change": -497976.71059100545,
+         "Inlet_Flowrate": 721259.6745217671,
+         "Inlet_Pressure": 175707102.790332,
+         "Inlet_Enthalpy": 971551.2203692684,
+         "Pressure_Change": -435421.2855674243,
          "_name": "Sample-46"
       },
       "Sample-47": {
-         "Inlet_Flowrate": 4679.740328099724,
-         "Inlet_Pressure": 42148486.77554754,
-         "Inlet_Enthalpy": 3515090.643467011,
-         "Pressure_Change": -365525.37391144846,
+         "Inlet_Flowrate": 954670.9782564115,
+         "Inlet_Pressure": 104045116.71253152,
+         "Inlet_Enthalpy": 4169306.9147742693,
+         "Pressure_Change": -262297.0723357247,
          "_name": "Sample-47"
       },
       "Sample-48": {
-         "Inlet_Flowrate": 605760.7553960514,
-         "Inlet_Pressure": 43849413.609894045,
-         "Inlet_Enthalpy": 438216.8189974937,
-         "Pressure_Change": 493739.76287989493,
+         "Inlet_Flowrate": 294000.8522598438,
+         "Inlet_Pressure": 77677685.22396961,
+         "Inlet_Enthalpy": 1042759.4679447832,
+         "Pressure_Change": 323200.41713437065,
          "_name": "Sample-48"
       },
       "Sample-49": {
-         "Inlet_Flowrate": 927844.4923243312,
-         "Inlet_Pressure": 44820910.9442735,
-         "Inlet_Enthalpy": 3471340.3396567586,
-         "Pressure_Change": 446704.134662817,
+         "Inlet_Flowrate": 38219.1280802677,
+         "Inlet_Pressure": 101108422.94837385,
+         "Inlet_Enthalpy": 1832901.3583301827,
+         "Pressure_Change": -149876.01046780584,
          "_name": "Sample-49"
       },
       "Sample-50": {
-         "Inlet_Flowrate": 598632.3743284465,
-         "Inlet_Pressure": 101163328.50915751,
-         "Inlet_Enthalpy": 3676413.3246368305,
-         "Pressure_Change": 211941.64298350434,
+         "Inlet_Flowrate": 693152.523940054,
+         "Inlet_Pressure": 139791261.28094667,
+         "Inlet_Enthalpy": 2482630.817092318,
+         "Pressure_Change": 428837.0867036114,
          "_name": "Sample-50"
       },
       "Sample-51": {
-         "Inlet_Flowrate": 567885.9716970215,
-         "Inlet_Pressure": 52050166.574683845,
-         "Inlet_Enthalpy": 3223029.3500401243,
-         "Pressure_Change": 426408.85027132265,
+         "Inlet_Flowrate": 552937.1096114456,
+         "Inlet_Pressure": 131498913.05555563,
+         "Inlet_Enthalpy": 1623811.9005650461,
+         "Pressure_Change": 418720.88526453427,
          "_name": "Sample-51"
       },
       "Sample-52": {
-         "Inlet_Flowrate": 545835.404102739,
-         "Inlet_Pressure": 22645020.64169763,
-         "Inlet_Enthalpy": 337835.4260077818,
-         "Pressure_Change": -57564.90500025678,
+         "Inlet_Flowrate": 235441.48221242323,
+         "Inlet_Pressure": 138945374.68226364,
+         "Inlet_Enthalpy": 1830823.0834235356,
+         "Pressure_Change": -99706.50436887483,
          "_name": "Sample-52"
       },
       "Sample-53": {
-         "Inlet_Flowrate": 428169.4438729817,
-         "Inlet_Pressure": 3837473.744043333,
-         "Inlet_Enthalpy": 2390539.16895969,
-         "Pressure_Change": -314778.9865881029,
+         "Inlet_Flowrate": 396326.48383611796,
+         "Inlet_Pressure": 67987107.99776864,
+         "Inlet_Enthalpy": 304695.19410956494,
+         "Pressure_Change": -450575.2288429267,
          "_name": "Sample-53"
       },
       "Sample-54": {
-         "Inlet_Flowrate": 179582.74520977697,
-         "Inlet_Pressure": 72002780.54482579,
-         "Inlet_Enthalpy": 2267785.381700359,
-         "Pressure_Change": 265997.238410956,
+         "Inlet_Flowrate": 822668.5517976495,
+         "Inlet_Pressure": 155994357.2263389,
+         "Inlet_Enthalpy": 2466128.968140657,
+         "Pressure_Change": -223271.12413388398,
          "_name": "Sample-54"
       },
       "Sample-55": {
-         "Inlet_Flowrate": 919705.4450614009,
-         "Inlet_Pressure": 168318982.72253567,
-         "Inlet_Enthalpy": 4331688.972792846,
-         "Pressure_Change": -107625.76667115098,
+         "Inlet_Flowrate": 800720.7998999757,
+         "Inlet_Pressure": 144799698.96879092,
+         "Inlet_Enthalpy": 1477161.5812747194,
+         "Pressure_Change": 418996.6515154595,
          "_name": "Sample-55"
       },
       "Sample-56": {
-         "Inlet_Flowrate": 986350.9043158017,
-         "Inlet_Pressure": 121710554.17989914,
-         "Inlet_Enthalpy": 2130973.0913909855,
-         "Pressure_Change": -299845.7198519969,
+         "Inlet_Flowrate": 180624.0785623904,
+         "Inlet_Pressure": 134713557.6998897,
+         "Inlet_Enthalpy": 1824029.8385355826,
+         "Pressure_Change": -215804.45977250906,
          "_name": "Sample-56"
       },
       "Sample-57": {
-         "Inlet_Flowrate": 709395.7529222873,
-         "Inlet_Pressure": 108866430.88493429,
-         "Inlet_Enthalpy": 1552106.3862683303,
-         "Pressure_Change": -151053.70920507563,
+         "Inlet_Flowrate": 170080.2505586464,
+         "Inlet_Pressure": 128778686.87150921,
+         "Inlet_Enthalpy": 1824222.0434692001,
+         "Pressure_Change": -216427.79913536413,
          "_name": "Sample-57"
       },
       "Sample-58": {
-         "Inlet_Flowrate": 468542.2274136908,
-         "Inlet_Pressure": 43050663.52215783,
-         "Inlet_Enthalpy": 433741.8745452797,
-         "Pressure_Change": -98833.97318026354,
+         "Inlet_Flowrate": 50984.346832176336,
+         "Inlet_Pressure": 93959426.55258135,
+         "Inlet_Enthalpy": 2969548.380619452,
+         "Pressure_Change": -489769.7315325057,
          "_name": "Sample-58"
       },
       "Sample-59": {
-         "Inlet_Flowrate": 250259.5013187655,
-         "Inlet_Pressure": 10870947.66941994,
-         "Inlet_Enthalpy": 4346424.712255048,
-         "Pressure_Change": 88835.31064221135,
+         "Inlet_Flowrate": 976008.7116502417,
+         "Inlet_Pressure": 175854491.54034814,
+         "Inlet_Enthalpy": 1801395.5622907626,
+         "Pressure_Change": 36203.53529933933,
          "_name": "Sample-59"
       },
       "Sample-60": {
-         "Inlet_Flowrate": 581685.2848444758,
-         "Inlet_Pressure": 144897753.90311128,
-         "Inlet_Enthalpy": 1720571.6521452467,
-         "Pressure_Change": -447391.46078748757,
+         "Inlet_Flowrate": 665844.3541187152,
+         "Inlet_Pressure": 81326659.72020361,
+         "Inlet_Enthalpy": 4014428.2403129186,
+         "Pressure_Change": -168504.79637549678,
          "_name": "Sample-60"
       },
       "Sample-61": {
-         "Inlet_Flowrate": 47934.510572389096,
-         "Inlet_Pressure": 38703881.32793113,
-         "Inlet_Enthalpy": 1995184.8008215085,
-         "Pressure_Change": 404366.99433952593,
+         "Inlet_Flowrate": 950024.4934962015,
+         "Inlet_Pressure": 106595437.03438167,
+         "Inlet_Enthalpy": 3663797.859566268,
+         "Pressure_Change": 321268.02597069193,
          "_name": "Sample-61"
       },
       "Sample-62": {
-         "Inlet_Flowrate": 848695.7881239664,
-         "Inlet_Pressure": 102269063.27390808,
-         "Inlet_Enthalpy": 486610.21501521,
-         "Pressure_Change": -402121.836213676,
+         "Inlet_Flowrate": 944326.662930716,
+         "Inlet_Pressure": 13250996.790106189,
+         "Inlet_Enthalpy": 3597527.457217891,
+         "Pressure_Change": -83356.00639436604,
          "_name": "Sample-62"
       },
       "Sample-63": {
-         "Inlet_Flowrate": 576339.3710201508,
-         "Inlet_Pressure": 91130428.82297254,
-         "Inlet_Enthalpy": 2761147.947326597,
-         "Pressure_Change": 421288.0344641544,
+         "Inlet_Flowrate": 64781.92994949009,
+         "Inlet_Pressure": 149532931.01322448,
+         "Inlet_Enthalpy": 2207327.7803834793,
+         "Pressure_Change": -478488.7957079405,
          "_name": "Sample-63"
       },
       "Sample-64": {
-         "Inlet_Flowrate": 115099.64723005578,
-         "Inlet_Pressure": 103430150.93451895,
-         "Inlet_Enthalpy": 4086256.2258036803,
-         "Pressure_Change": 251604.36504815787,
+         "Inlet_Flowrate": 760248.0093839563,
+         "Inlet_Pressure": 190802192.09004995,
+         "Inlet_Enthalpy": 883165.9535447764,
+         "Pressure_Change": 42480.7856607592,
          "_name": "Sample-64"
       },
       "Sample-65": {
-         "Inlet_Flowrate": 979788.3192272013,
-         "Inlet_Pressure": 72296643.62449965,
-         "Inlet_Enthalpy": 2872754.2519599986,
-         "Pressure_Change": -170765.87951828237,
+         "Inlet_Flowrate": 133500.5619939561,
+         "Inlet_Pressure": 153118751.607329,
+         "Inlet_Enthalpy": 910973.4343013853,
+         "Pressure_Change": -335996.06792608486,
          "_name": "Sample-65"
       },
       "Sample-66": {
-         "Inlet_Flowrate": 477117.95446378883,
-         "Inlet_Pressure": 154803848.4129013,
-         "Inlet_Enthalpy": 540170.767569259,
-         "Pressure_Change": 382608.9279743782,
+         "Inlet_Flowrate": 498354.60942739865,
+         "Inlet_Pressure": 95100002.03631425,
+         "Inlet_Enthalpy": 480170.86786977807,
+         "Pressure_Change": -121493.61136356182,
          "_name": "Sample-66"
       },
       "Sample-67": {
-         "Inlet_Flowrate": 701490.499004905,
-         "Inlet_Pressure": 181235265.0910909,
-         "Inlet_Enthalpy": 33138.03626165306,
-         "Pressure_Change": -207407.36289412022,
+         "Inlet_Flowrate": 860532.9227480586,
+         "Inlet_Pressure": 41542520.005972646,
+         "Inlet_Enthalpy": 203546.7976371088,
+         "Pressure_Change": 37294.626962393755,
          "_name": "Sample-67"
       },
       "Sample-68": {
-         "Inlet_Flowrate": 206238.94872759187,
-         "Inlet_Pressure": 169508015.49097362,
-         "Inlet_Enthalpy": 405506.9619571161,
-         "Pressure_Change": 344312.2063998735,
+         "Inlet_Flowrate": 291475.9532428762,
+         "Inlet_Pressure": 150996531.00465283,
+         "Inlet_Enthalpy": 158071.20789716233,
+         "Pressure_Change": -16874.969344914483,
          "_name": "Sample-68"
       },
       "Sample-69": {
-         "Inlet_Flowrate": 832132.0116631323,
-         "Inlet_Pressure": 19412877.225264274,
-         "Inlet_Enthalpy": 2409219.285769631,
-         "Pressure_Change": 296882.57196746976,
+         "Inlet_Flowrate": 677464.358604462,
+         "Inlet_Pressure": 85396269.71307416,
+         "Inlet_Enthalpy": 3405575.94359941,
+         "Pressure_Change": 273238.5736836692,
          "_name": "Sample-69"
       },
       "Sample-70": {
-         "Inlet_Flowrate": 980756.4862302452,
-         "Inlet_Pressure": 113016409.3917769,
-         "Inlet_Enthalpy": 3649024.351212537,
-         "Pressure_Change": 472742.74514280166,
+         "Inlet_Flowrate": 414795.15271648706,
+         "Inlet_Pressure": 77862265.56581146,
+         "Inlet_Enthalpy": 180043.29318753342,
+         "Pressure_Change": -341075.6386202771,
          "_name": "Sample-70"
       },
       "Sample-71": {
-         "Inlet_Flowrate": 936737.0696067503,
-         "Inlet_Pressure": 83144749.34907396,
-         "Inlet_Enthalpy": 3055560.574282927,
-         "Pressure_Change": 218518.69523442513,
+         "Inlet_Flowrate": 528730.4942691658,
+         "Inlet_Pressure": 197895986.5557168,
+         "Inlet_Enthalpy": 3952424.2555395085,
+         "Pressure_Change": -491291.97368822776,
          "_name": "Sample-71"
       },
       "Sample-72": {
-         "Inlet_Flowrate": 827667.324478171,
-         "Inlet_Pressure": 137081150.25318184,
-         "Inlet_Enthalpy": 3134627.4708831883,
-         "Pressure_Change": 162379.69355688477,
+         "Inlet_Flowrate": 873919.0223657696,
+         "Inlet_Pressure": 109629413.51891288,
+         "Inlet_Enthalpy": 2547483.0040495815,
+         "Pressure_Change": -458632.9164944678,
          "_name": "Sample-72"
       },
       "Sample-73": {
-         "Inlet_Flowrate": 785166.2115316116,
-         "Inlet_Pressure": 114918516.6997421,
-         "Inlet_Enthalpy": 1188598.878041225,
-         "Pressure_Change": -291383.7942472286,
+         "Inlet_Flowrate": 362039.2585865555,
+         "Inlet_Pressure": 80958457.0162232,
+         "Inlet_Enthalpy": 182267.18401682773,
+         "Pressure_Change": -195133.47886990017,
          "_name": "Sample-73"
       },
       "Sample-74": {
-         "Inlet_Flowrate": 103026.71113797226,
-         "Inlet_Pressure": 18721478.986459468,
-         "Inlet_Enthalpy": 2794880.5300711486,
-         "Pressure_Change": 46864.00282297423,
+         "Inlet_Flowrate": 789564.3707298572,
+         "Inlet_Pressure": 172676358.90576178,
+         "Inlet_Enthalpy": 3800190.2293324354,
+         "Pressure_Change": -156236.17683004163,
          "_name": "Sample-74"
       },
       "Sample-75": {
-         "Inlet_Flowrate": 424234.74704722455,
-         "Inlet_Pressure": 195961216.577359,
-         "Inlet_Enthalpy": 719540.7152656345,
-         "Pressure_Change": 45984.11108190287,
+         "Inlet_Flowrate": 737184.5479590334,
+         "Inlet_Pressure": 65085059.933580026,
+         "Inlet_Enthalpy": 446268.52443147014,
+         "Pressure_Change": 420992.9337684362,
          "_name": "Sample-75"
       },
       "Sample-76": {
-         "Inlet_Flowrate": 733129.7839289021,
-         "Inlet_Pressure": 80025310.1527274,
-         "Inlet_Enthalpy": 3931087.904231699,
-         "Pressure_Change": 228714.01241438976,
+         "Inlet_Flowrate": 353966.0810151492,
+         "Inlet_Pressure": 145183742.50613442,
+         "Inlet_Enthalpy": 3011815.5492963702,
+         "Pressure_Change": -236276.04323422204,
          "_name": "Sample-76"
       },
       "Sample-77": {
-         "Inlet_Flowrate": 303819.00783961685,
-         "Inlet_Pressure": 138330048.5845993,
-         "Inlet_Enthalpy": 3018753.1214257837,
-         "Pressure_Change": 226390.2987576254,
+         "Inlet_Flowrate": 179378.9569653714,
+         "Inlet_Pressure": 127892226.69392148,
+         "Inlet_Enthalpy": 1432486.6095472656,
+         "Pressure_Change": 207533.1726939294,
          "_name": "Sample-77"
       },
       "Sample-78": {
-         "Inlet_Flowrate": 574667.8471397882,
-         "Inlet_Pressure": 37435546.28443815,
-         "Inlet_Enthalpy": 1550576.921035085,
-         "Pressure_Change": -243669.33728813133,
+         "Inlet_Flowrate": 171884.4130985099,
+         "Inlet_Pressure": 136309317.88001359,
+         "Inlet_Enthalpy": 412029.95705565106,
+         "Pressure_Change": 146365.4727390596,
          "_name": "Sample-78"
       },
       "Sample-79": {
-         "Inlet_Flowrate": 718588.7347612135,
-         "Inlet_Pressure": 92433856.02550897,
-         "Inlet_Enthalpy": 3804437.7762001306,
-         "Pressure_Change": -77503.25067245355,
+         "Inlet_Flowrate": 518355.4046759496,
+         "Inlet_Pressure": 59661458.56558705,
+         "Inlet_Enthalpy": 1818264.1352249242,
+         "Pressure_Change": 43042.75749846897,
          "_name": "Sample-79"
       },
       "Sample-80": {
-         "Inlet_Flowrate": 758164.1222037603,
-         "Inlet_Pressure": 196921300.4494376,
-         "Inlet_Enthalpy": 543068.5627662383,
-         "Pressure_Change": 416990.68857206276,
+         "Inlet_Flowrate": 985864.2733576624,
+         "Inlet_Pressure": 192823362.06039783,
+         "Inlet_Enthalpy": 2580227.7655490153,
+         "Pressure_Change": 135341.72708601307,
          "_name": "Sample-80"
       },
       "Sample-81": {
-         "Inlet_Flowrate": 706969.5345976029,
-         "Inlet_Pressure": 4958539.232469627,
-         "Inlet_Enthalpy": 2609883.525028206,
-         "Pressure_Change": -419089.15409748704,
+         "Inlet_Flowrate": 8973.177471082916,
+         "Inlet_Pressure": 145901496.9943757,
+         "Inlet_Enthalpy": 2853392.0514224237,
+         "Pressure_Change": -389865.4982614056,
          "_name": "Sample-81"
       },
       "Sample-82": {
-         "Inlet_Flowrate": 218611.912503142,
-         "Inlet_Pressure": 77660904.47797827,
-         "Inlet_Enthalpy": 1498063.208329819,
-         "Pressure_Change": 472477.3369223743,
+         "Inlet_Flowrate": 312732.6191947957,
+         "Inlet_Pressure": 131652263.93848662,
+         "Inlet_Enthalpy": 3456375.2445685305,
+         "Pressure_Change": -194057.75242500933,
          "_name": "Sample-82"
       },
       "Sample-83": {
-         "Inlet_Flowrate": 291613.9095100719,
-         "Inlet_Pressure": 127418562.1682626,
-         "Inlet_Enthalpy": 2925060.7587402486,
-         "Pressure_Change": 466923.2259782434,
+         "Inlet_Flowrate": 915693.0239389312,
+         "Inlet_Pressure": 10146196.506575616,
+         "Inlet_Enthalpy": 4155403.9647655785,
+         "Pressure_Change": 365100.99769416044,
          "_name": "Sample-83"
       },
       "Sample-84": {
-         "Inlet_Flowrate": 811120.1688733175,
-         "Inlet_Pressure": 28464743.408668008,
-         "Inlet_Enthalpy": 2128393.5692525734,
-         "Pressure_Change": 66588.76240120956,
+         "Inlet_Flowrate": 830308.9892284431,
+         "Inlet_Pressure": 82107773.33574338,
+         "Inlet_Enthalpy": 3053314.031264945,
+         "Pressure_Change": 371395.72816641105,
          "_name": "Sample-84"
       },
       "Sample-85": {
-         "Inlet_Flowrate": 813489.2869433129,
-         "Inlet_Pressure": 193638968.69730908,
-         "Inlet_Enthalpy": 3930371.439062415,
-         "Pressure_Change": -314482.0667093613,
+         "Inlet_Flowrate": 883237.8632683033,
+         "Inlet_Pressure": 17160059.305587415,
+         "Inlet_Enthalpy": 441448.00974178285,
+         "Pressure_Change": 391645.9795557548,
          "_name": "Sample-85"
       },
       "Sample-86": {
-         "Inlet_Flowrate": 774637.2214836088,
-         "Inlet_Pressure": 18543573.1762467,
-         "Inlet_Enthalpy": 1738953.7118693504,
-         "Pressure_Change": -497264.1386721719,
+         "Inlet_Flowrate": 803214.2789360295,
+         "Inlet_Pressure": 151884595.64838198,
+         "Inlet_Enthalpy": 3090541.0080196196,
+         "Pressure_Change": -56543.514013394946,
          "_name": "Sample-86"
       },
       "Sample-87": {
-         "Inlet_Flowrate": 48574.60743045112,
-         "Inlet_Pressure": 144128569.49618948,
-         "Inlet_Enthalpy": 1893082.7477228097,
-         "Pressure_Change": 448598.59966855636,
+         "Inlet_Flowrate": 867437.504400415,
+         "Inlet_Pressure": 116359719.99407978,
+         "Inlet_Enthalpy": 3497054.845234633,
+         "Pressure_Change": 463534.6859781584,
          "_name": "Sample-87"
       },
       "Sample-88": {
-         "Inlet_Flowrate": 848187.2731070562,
-         "Inlet_Pressure": 58705320.4493283,
-         "Inlet_Enthalpy": 1642770.8546811277,
-         "Pressure_Change": -145565.19996987138,
+         "Inlet_Flowrate": 379882.86748129746,
+         "Inlet_Pressure": 144712820.5899737,
+         "Inlet_Enthalpy": 603381.7840484831,
+         "Pressure_Change": 390064.01587054704,
          "_name": "Sample-88"
       },
       "Sample-89": {
-         "Inlet_Flowrate": 39415.40091732733,
-         "Inlet_Pressure": 29487496.99726711,
-         "Inlet_Enthalpy": 2656616.094219037,
-         "Pressure_Change": 162696.68066161522,
+         "Inlet_Flowrate": 532250.2332832954,
+         "Inlet_Pressure": 189314618.11850038,
+         "Inlet_Enthalpy": 3126353.828807517,
+         "Pressure_Change": 480741.92455202225,
          "_name": "Sample-89"
       },
       "Sample-90": {
-         "Inlet_Flowrate": 300919.8108724585,
-         "Inlet_Pressure": 6706026.118096101,
-         "Inlet_Enthalpy": 515188.9813590164,
-         "Pressure_Change": -88090.15319204208,
+         "Inlet_Flowrate": 204923.2640101787,
+         "Inlet_Pressure": 83798752.29125917,
+         "Inlet_Enthalpy": 2733467.793416414,
+         "Pressure_Change": -8745.26292238629,
          "_name": "Sample-90"
       },
       "Sample-91": {
-         "Inlet_Flowrate": 881316.6639519262,
-         "Inlet_Pressure": 14681169.155721966,
-         "Inlet_Enthalpy": 4312479.696775022,
-         "Pressure_Change": -205857.13179429888,
+         "Inlet_Flowrate": 751532.2026040242,
+         "Inlet_Pressure": 117987113.34100816,
+         "Inlet_Enthalpy": 1015274.2121407444,
+         "Pressure_Change": -15765.582384434936,
          "_name": "Sample-91"
       },
       "Sample-92": {
-         "Inlet_Flowrate": 799310.4285356698,
-         "Inlet_Pressure": 1682327.4839352497,
-         "Inlet_Enthalpy": 3695953.1453986783,
-         "Pressure_Change": -442192.6422722111,
+         "Inlet_Flowrate": 568186.489604891,
+         "Inlet_Pressure": 162507076.07581383,
+         "Inlet_Enthalpy": 1154402.4168732716,
+         "Pressure_Change": -494562.9206377991,
          "_name": "Sample-92"
       },
       "Sample-93": {
-         "Inlet_Flowrate": 368375.62676806335,
-         "Inlet_Pressure": 182563471.17669752,
-         "Inlet_Enthalpy": 1495264.0134210666,
-         "Pressure_Change": -358697.9727483442,
+         "Inlet_Flowrate": 101613.17275074065,
+         "Inlet_Pressure": 45406792.81291397,
+         "Inlet_Enthalpy": 2701575.1320895893,
+         "Pressure_Change": 433409.0100575726,
          "_name": "Sample-93"
       },
       "Sample-94": {
-         "Inlet_Flowrate": 423750.2101319379,
-         "Inlet_Pressure": 187688119.7202298,
-         "Inlet_Enthalpy": 1772511.9487320744,
-         "Pressure_Change": -344712.44620382553,
+         "Inlet_Flowrate": 578939.3966538425,
+         "Inlet_Pressure": 98515165.22394982,
+         "Inlet_Enthalpy": 2181076.24719845,
+         "Pressure_Change": 358284.6567215569,
          "_name": "Sample-94"
       },
       "Sample-95": {
-         "Inlet_Flowrate": 820256.7735305758,
-         "Inlet_Pressure": 33213966.770297095,
-         "Inlet_Enthalpy": 4109245.167079673,
-         "Pressure_Change": -75597.51758444711,
+         "Inlet_Flowrate": 713454.9779909522,
+         "Inlet_Pressure": 167873446.64976707,
+         "Inlet_Enthalpy": 1941105.5392837056,
+         "Pressure_Change": 348738.25261150254,
          "_name": "Sample-95"
       },
       "Sample-96": {
-         "Inlet_Flowrate": 497009.1893228384,
-         "Inlet_Pressure": 89788485.66231947,
-         "Inlet_Enthalpy": 3344481.1812413805,
-         "Pressure_Change": 136969.4287735218,
+         "Inlet_Flowrate": 123894.45538037845,
+         "Inlet_Pressure": 45571994.82039628,
+         "Inlet_Enthalpy": 4135300.294751905,
+         "Pressure_Change": 437656.8675129325,
          "_name": "Sample-96"
       },
       "Sample-97": {
-         "Inlet_Flowrate": 988679.1132393875,
-         "Inlet_Pressure": 103488292.83285306,
-         "Inlet_Enthalpy": 989820.1933518376,
-         "Pressure_Change": 252455.79545746825,
+         "Inlet_Flowrate": 416156.20194924856,
+         "Inlet_Pressure": 13297724.85162962,
+         "Inlet_Enthalpy": 1140073.7143930285,
+         "Pressure_Change": -191055.01371566212,
          "_name": "Sample-97"
       },
       "Sample-98": {
-         "Inlet_Flowrate": 852523.5331747337,
-         "Inlet_Pressure": 181664684.13205883,
-         "Inlet_Enthalpy": 3378961.696565281,
-         "Pressure_Change": 493414.0869612156,
+         "Inlet_Flowrate": 460105.7813792809,
+         "Inlet_Pressure": 127853627.04240651,
+         "Inlet_Enthalpy": 3836900.516144552,
+         "Pressure_Change": -265978.3462112857,
          "_name": "Sample-98"
       },
       "Sample-99": {
-         "Inlet_Flowrate": 348303.9991646617,
-         "Inlet_Pressure": 121709283.24690662,
-         "Inlet_Enthalpy": 197227.39648077422,
-         "Pressure_Change": 77355.92346284154,
+         "Inlet_Flowrate": 585345.3503431258,
+         "Inlet_Pressure": 146681525.55473804,
+         "Inlet_Enthalpy": 1215132.3531340007,
+         "Pressure_Change": 416986.21493658284,
          "_name": "Sample-99"
       },
       "Sample-100": {
-         "Inlet_Flowrate": 781469.0611024497,
-         "Inlet_Pressure": 50513780.73334526,
-         "Inlet_Enthalpy": 2792901.678160316,
-         "Pressure_Change": -81571.46587182372,
+         "Inlet_Flowrate": 523010.23019492184,
+         "Inlet_Pressure": 164623019.77208102,
+         "Inlet_Enthalpy": 1794538.4123158455,
+         "Pressure_Change": -208781.03648791625,
          "_name": "Sample-100"
       }
    },
    "results": {
       "Sample-1": {
          "solved": true,
-         "iters": 3,
+         "iters": 5,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.011
+         "time": 0.01
       },
       "Sample-2": {
+         "solved": true,
+         "iters": 5,
+         "iters_in_restoration": 0,
+         "iters_w_regularization": 0,
+         "time": 0.01
+      },
+      "Sample-3": {
          "solved": true,
          "iters": 6,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.016
+         "time": 0.01
       },
-      "Sample-3": {
+      "Sample-4": {
+         "solved": true,
+         "iters": 4,
+         "iters_in_restoration": 0,
+         "iters_w_regularization": 0,
+         "time": 0.019
+      },
+      "Sample-5": {
+         "solved": true,
+         "iters": 4,
+         "iters_in_restoration": 0,
+         "iters_w_regularization": 0,
+         "time": 0.008
+      },
+      "Sample-6": {
          "solved": true,
          "iters": 3,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
          "time": 0.009000000000000001
-      },
-      "Sample-4": {
-         "solved": true,
-         "iters": 6,
-         "iters_in_restoration": 0,
-         "iters_w_regularization": 0,
-         "time": 0.012
-      },
-      "Sample-5": {
-         "solved": true,
-         "iters": 3,
-         "iters_in_restoration": 0,
-         "iters_w_regularization": 0,
-         "time": 0.007
-      },
-      "Sample-6": {
-         "solved": true,
-         "iters": 4,
-         "iters_in_restoration": 0,
-         "iters_w_regularization": 0,
-         "time": 0.014
       },
       "Sample-7": {
          "solved": true,
          "iters": 4,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.009000000000000001
+         "time": 0.008
       },
       "Sample-8": {
          "solved": true,
-         "iters": 3,
+         "iters": 7,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.011
+         "time": 0.012
       },
       "Sample-9": {
          "solved": true,
          "iters": 3,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.011
+         "time": 0.013000000000000001
       },
       "Sample-10": {
          "solved": true,
-         "iters": 3,
+         "iters": 5,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
          "time": 0.009000000000000001
       },
       "Sample-11": {
          "solved": true,
-         "iters": 6,
+         "iters": 4,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.011
+         "time": 0.017
       },
       "Sample-12": {
-         "solved": true,
-         "iters": 3,
-         "iters_in_restoration": 0,
-         "iters_w_regularization": 0,
-         "time": 0.01
-      },
-      "Sample-13": {
          "solved": true,
          "iters": 5,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.015
+         "time": 0.006
+      },
+      "Sample-13": {
+         "solved": true,
+         "iters": 4,
+         "iters_in_restoration": 0,
+         "iters_w_regularization": 0,
+         "time": 0.004
       },
       "Sample-14": {
          "solved": true,
          "iters": 3,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.009000000000000001
+         "time": 0.012
       },
       "Sample-15": {
          "solved": true,
          "iters": 4,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.01
+         "time": 0.005
       },
       "Sample-16": {
-         "solved": false,
-         "iters": 13,
-         "iters_in_restoration": 5,
+         "solved": true,
+         "iters": 3,
+         "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.023
+         "time": 0.009000000000000001
       },
       "Sample-17": {
          "solved": true,
          "iters": 3,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.006
+         "time": 0.01
       },
       "Sample-18": {
          "solved": true,
-         "iters": 4,
+         "iters": 14,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.012
+         "time": 0.052
       },
       "Sample-19": {
          "solved": true,
-         "iters": 3,
+         "iters": 5,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.011
+         "time": 0.012
       },
       "Sample-20": {
          "solved": true,
@@ -883,35 +883,35 @@
          "iters": 6,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.011
+         "time": 0.012
       },
       "Sample-22": {
          "solved": true,
          "iters": 3,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.01
+         "time": 0.008
       },
       "Sample-23": {
-         "solved": true,
-         "iters": 4,
-         "iters_in_restoration": 0,
+         "solved": false,
+         "iters": 12,
+         "iters_in_restoration": 4,
          "iters_w_regularization": 0,
-         "time": 0.014
+         "time": 0.012
       },
       "Sample-24": {
          "solved": true,
-         "iters": 3,
+         "iters": 4,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
          "time": 0.008
       },
       "Sample-25": {
          "solved": true,
-         "iters": 6,
+         "iters": 3,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.012
+         "time": 0.01
       },
       "Sample-26": {
          "solved": true,
@@ -925,133 +925,133 @@
          "iters": 4,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.009000000000000001
+         "time": 0.007
       },
       "Sample-28": {
          "solved": true,
-         "iters": 4,
+         "iters": 5,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
          "time": 0.012
       },
       "Sample-29": {
          "solved": true,
-         "iters": 6,
+         "iters": 3,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.018
+         "time": 0.01
       },
       "Sample-30": {
          "solved": true,
          "iters": 4,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.01
+         "time": 0.009000000000000001
       },
       "Sample-31": {
-         "solved": true,
-         "iters": 4,
-         "iters_in_restoration": 0,
-         "iters_w_regularization": 0,
-         "time": 0.01
-      },
-      "Sample-32": {
-         "solved": true,
-         "iters": 4,
-         "iters_in_restoration": 0,
-         "iters_w_regularization": 0,
-         "time": 0.011
-      },
-      "Sample-33": {
-         "solved": true,
-         "iters": 6,
-         "iters_in_restoration": 0,
-         "iters_w_regularization": 0,
-         "time": 0.007
-      },
-      "Sample-34": {
          "solved": true,
          "iters": 3,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.013000000000000001
+         "time": 0.009000000000000001
+      },
+      "Sample-32": {
+         "solved": true,
+         "iters": 3,
+         "iters_in_restoration": 0,
+         "iters_w_regularization": 0,
+         "time": 0.01
+      },
+      "Sample-33": {
+         "solved": true,
+         "iters": 5,
+         "iters_in_restoration": 0,
+         "iters_w_regularization": 0,
+         "time": 0.009000000000000001
+      },
+      "Sample-34": {
+         "solved": true,
+         "iters": 4,
+         "iters_in_restoration": 0,
+         "iters_w_regularization": 0,
+         "time": 0.007
       },
       "Sample-35": {
          "solved": true,
-         "iters": 4,
+         "iters": 5,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
          "time": 0.009000000000000001
       },
       "Sample-36": {
          "solved": true,
-         "iters": 7,
+         "iters": 4,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.014
+         "time": 0.011
       },
       "Sample-37": {
          "solved": true,
-         "iters": 5,
+         "iters": 8,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.013000000000000001
+         "time": 0.024
       },
       "Sample-38": {
          "solved": true,
-         "iters": 3,
+         "iters": 4,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
          "time": 0.009000000000000001
       },
       "Sample-39": {
          "solved": true,
-         "iters": 3,
+         "iters": 6,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.011
+         "time": 0.009000000000000001
       },
       "Sample-40": {
          "solved": true,
          "iters": 3,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.003
+         "time": 0.01
       },
       "Sample-41": {
-         "solved": false,
-         "iters": 13,
-         "iters_in_restoration": 5,
-         "iters_w_regularization": 0,
-         "time": 0.013000000000000001
-      },
-      "Sample-42": {
          "solved": true,
          "iters": 4,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.008
+         "time": 0.006
+      },
+      "Sample-42": {
+         "solved": true,
+         "iters": 3,
+         "iters_in_restoration": 0,
+         "iters_w_regularization": 0,
+         "time": 0.011
       },
       "Sample-43": {
+         "solved": true,
+         "iters": 4,
+         "iters_in_restoration": 0,
+         "iters_w_regularization": 0,
+         "time": 0.009000000000000001
+      },
+      "Sample-44": {
+         "solved": true,
+         "iters": 4,
+         "iters_in_restoration": 0,
+         "iters_w_regularization": 0,
+         "time": 0.006
+      },
+      "Sample-45": {
          "solved": true,
          "iters": 6,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
          "time": 0.014
-      },
-      "Sample-44": {
-         "solved": true,
-         "iters": 3,
-         "iters_in_restoration": 0,
-         "iters_w_regularization": 0,
-         "time": 0.008
-      },
-      "Sample-45": {
-         "solved": true,
-         "iters": 5,
-         "iters_in_restoration": 0,
-         "iters_w_regularization": 0,
-         "time": 0.01
       },
       "Sample-46": {
          "solved": true,
@@ -1062,199 +1062,199 @@
       },
       "Sample-47": {
          "solved": true,
-         "iters": 4,
+         "iters": 5,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.011
+         "time": 0.01
       },
       "Sample-48": {
          "solved": true,
          "iters": 3,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.011
+         "time": 0.006
       },
       "Sample-49": {
          "solved": true,
-         "iters": 6,
+         "iters": 3,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.012
+         "time": 0.008
       },
       "Sample-50": {
          "solved": true,
-         "iters": 4,
+         "iters": 5,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
          "time": 0.009000000000000001
       },
       "Sample-51": {
          "solved": true,
-         "iters": 6,
+         "iters": 3,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.011
+         "time": 0.01
       },
       "Sample-52": {
          "solved": true,
          "iters": 3,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.012
+         "time": 0.008
       },
       "Sample-53": {
-         "solved": false,
-         "iters": 24,
-         "iters_in_restoration": 16,
+         "solved": true,
+         "iters": 3,
+         "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.022
+         "time": 0.008
       },
       "Sample-54": {
          "solved": true,
-         "iters": 4,
+         "iters": 3,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.01
+         "time": 0.008
       },
       "Sample-55": {
          "solved": true,
-         "iters": 30,
+         "iters": 6,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.11499999999999999
+         "time": 0.01
       },
       "Sample-56": {
          "solved": true,
          "iters": 3,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.009000000000000001
+         "time": 0.004
       },
       "Sample-57": {
          "solved": true,
          "iters": 3,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.011
+         "time": 0.008
       },
       "Sample-58": {
          "solved": true,
-         "iters": 3,
+         "iters": 4,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.011
+         "time": 0.009000000000000001
       },
       "Sample-59": {
          "solved": true,
          "iters": 5,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.008
+         "time": 0.007
       },
       "Sample-60": {
          "solved": true,
-         "iters": 3,
+         "iters": 6,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.004
+         "time": 0.009000000000000001
       },
       "Sample-61": {
-         "solved": true,
-         "iters": 5,
-         "iters_in_restoration": 0,
-         "iters_w_regularization": 0,
-         "time": 0.011
-      },
-      "Sample-62": {
-         "solved": true,
-         "iters": 3,
-         "iters_in_restoration": 0,
-         "iters_w_regularization": 0,
-         "time": 0.011
-      },
-      "Sample-63": {
-         "solved": true,
-         "iters": 7,
-         "iters_in_restoration": 0,
-         "iters_w_regularization": 0,
-         "time": 0.012
-      },
-      "Sample-64": {
          "solved": true,
          "iters": 4,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.007
+         "time": 0.009000000000000001
+      },
+      "Sample-62": {
+         "solved": false,
+         "iters": 21,
+         "iters_in_restoration": 15,
+         "iters_w_regularization": 0,
+         "time": 0.016
+      },
+      "Sample-63": {
+         "solved": true,
+         "iters": 3,
+         "iters_in_restoration": 0,
+         "iters_w_regularization": 0,
+         "time": 0.008
+      },
+      "Sample-64": {
+         "solved": true,
+         "iters": 3,
+         "iters_in_restoration": 0,
+         "iters_w_regularization": 0,
+         "time": 0.008
       },
       "Sample-65": {
          "solved": true,
-         "iters": 5,
+         "iters": 3,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.01
+         "time": 0.009000000000000001
       },
       "Sample-66": {
          "solved": true,
          "iters": 3,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.011
+         "time": 0.009000000000000001
       },
       "Sample-67": {
          "solved": true,
-         "iters": 2,
+         "iters": 3,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.027000000000000003
+         "time": 0.011
       },
       "Sample-68": {
          "solved": true,
          "iters": 3,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.008
+         "time": 0.012
       },
       "Sample-69": {
          "solved": true,
-         "iters": 6,
+         "iters": 5,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.02
+         "time": 0.009000000000000001
       },
       "Sample-70": {
          "solved": true,
-         "iters": 4,
+         "iters": 3,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.01
+         "time": 0.011
       },
       "Sample-71": {
          "solved": true,
          "iters": 6,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.012
+         "time": 0.01
       },
       "Sample-72": {
          "solved": true,
-         "iters": 5,
+         "iters": 4,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.011
+         "time": 0.009000000000000001
       },
       "Sample-73": {
          "solved": true,
          "iters": 3,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.01
+         "time": 0.011
       },
       "Sample-74": {
-         "solved": false,
-         "iters": 23,
-         "iters_in_restoration": 15,
+         "solved": true,
+         "iters": 4,
+         "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.037
+         "time": 0.006
       },
       "Sample-75": {
          "solved": true,
@@ -1268,175 +1268,175 @@
          "iters": 4,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.009000000000000001
+         "time": 0.01
       },
       "Sample-77": {
          "solved": true,
-         "iters": 5,
+         "iters": 3,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
          "time": 0.01
       },
       "Sample-78": {
          "solved": true,
-         "iters": 5,
+         "iters": 3,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.016
+         "time": 0.007
       },
       "Sample-79": {
          "solved": true,
-         "iters": 4,
+         "iters": 5,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.009000000000000001
+         "time": 0.012
       },
       "Sample-80": {
          "solved": true,
          "iters": 3,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.011
+         "time": 0.007
       },
       "Sample-81": {
-         "solved": false,
-         "iters": 18,
-         "iters_in_restoration": 10,
-         "iters_w_regularization": 0,
-         "time": 0.03
-      },
-      "Sample-82": {
          "solved": true,
-         "iters": 3,
+         "iters": 4,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.011
+         "time": 0.009000000000000001
       },
-      "Sample-83": {
+      "Sample-82": {
          "solved": true,
          "iters": 5,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.01
+         "time": 0.005
+      },
+      "Sample-83": {
+         "solved": true,
+         "iters": 4,
+         "iters_in_restoration": 0,
+         "iters_w_regularization": 0,
+         "time": 0.007
       },
       "Sample-84": {
          "solved": true,
          "iters": 6,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.012
+         "time": 0.01
       },
       "Sample-85": {
+         "solved": true,
+         "iters": 3,
+         "iters_in_restoration": 0,
+         "iters_w_regularization": 0,
+         "time": 0.011
+      },
+      "Sample-86": {
          "solved": true,
          "iters": 4,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.009000000000000001
-      },
-      "Sample-86": {
-         "solved": false,
-         "iters": 16,
-         "iters_in_restoration": 7,
-         "iters_w_regularization": 0,
-         "time": 0.024
+         "time": 0.003
       },
       "Sample-87": {
          "solved": true,
-         "iters": 3,
+         "iters": 4,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
          "time": 0.009000000000000001
       },
       "Sample-88": {
          "solved": true,
-         "iters": 4,
-         "iters_in_restoration": 0,
-         "iters_w_regularization": 0,
-         "time": 0.008
-      },
-      "Sample-89": {
-         "solved": true,
-         "iters": 6,
-         "iters_in_restoration": 0,
-         "iters_w_regularization": 0,
-         "time": 0.023
-      },
-      "Sample-90": {
-         "solved": true,
          "iters": 3,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.011
+         "time": 0.009000000000000001
       },
-      "Sample-91": {
+      "Sample-89": {
          "solved": true,
          "iters": 5,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
          "time": 0.009000000000000001
       },
-      "Sample-92": {
-         "solved": false,
-         "iters": 21,
-         "iters_in_restoration": 15,
+      "Sample-90": {
+         "solved": true,
+         "iters": 4,
+         "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.02
+         "time": 0.006
+      },
+      "Sample-91": {
+         "solved": true,
+         "iters": 3,
+         "iters_in_restoration": 0,
+         "iters_w_regularization": 0,
+         "time": 0.004
+      },
+      "Sample-92": {
+         "solved": true,
+         "iters": 3,
+         "iters_in_restoration": 0,
+         "iters_w_regularization": 0,
+         "time": 0.01
       },
       "Sample-93": {
          "solved": true,
          "iters": 5,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.012
+         "time": 0.011
       },
       "Sample-94": {
          "solved": true,
          "iters": 4,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.01
+         "time": 0.009000000000000001
       },
       "Sample-95": {
+         "solved": true,
+         "iters": 3,
+         "iters_in_restoration": 0,
+         "iters_w_regularization": 0,
+         "time": 0.007
+      },
+      "Sample-96": {
+         "solved": true,
+         "iters": 4,
+         "iters_in_restoration": 0,
+         "iters_w_regularization": 0,
+         "time": 0.009000000000000001
+      },
+      "Sample-97": {
          "solved": true,
          "iters": 4,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
          "time": 0.01
       },
-      "Sample-96": {
-         "solved": true,
-         "iters": 5,
-         "iters_in_restoration": 0,
-         "iters_w_regularization": 0,
-         "time": 0.01
-      },
-      "Sample-97": {
-         "solved": true,
-         "iters": 3,
-         "iters_in_restoration": 0,
-         "iters_w_regularization": 0,
-         "time": 0.011
-      },
       "Sample-98": {
          "solved": true,
-         "iters": 3,
+         "iters": 6,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.008
+         "time": 0.005
       },
       "Sample-99": {
          "solved": true,
-         "iters": 3,
+         "iters": 4,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.013000000000000001
+         "time": 0.011
       },
       "Sample-100": {
          "solved": true,
          "iters": 5,
          "iters_in_restoration": 0,
          "iters_w_regularization": 0,
-         "time": 0.011
+         "time": 0.009000000000000001
       }
    }
 }
