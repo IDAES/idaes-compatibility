@@ -447,6 +447,11 @@ class HDAParameterData(PhysicalParameterBlock):
                 "temperature_dew": {"method": "_temperature_dew", "units": "K"},
                 "pressure_bubble": {"method": "_pressure_bubble", "units": "Pa"},
                 "pressure_dew": {"method": "_pressure_dew", "units": "Pa"},
+            }
+        )
+        
+        obj.define_custom_properties(
+            {
                 "fug_vap": {"method": "_fug_vap", "units": "Pa"},
                 "fug_liq": {"method": "_fug_liq", "units": "Pa"},
                 "dh_vap": {"method": "_dh_vap", "units": "J/mol"},

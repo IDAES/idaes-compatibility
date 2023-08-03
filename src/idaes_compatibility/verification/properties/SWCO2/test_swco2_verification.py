@@ -21,8 +21,8 @@ import idaes.models.properties.swco2 as swco2
 
 path = os.path.dirname(os.path.abspath(__file__))
 
-H_OFFSET = 506.778
-S_OFFSET = 2.738255753
+H_OFFSET = 0 #506.778
+S_OFFSET = 0 #2.738255753
 
 
 def test_swco2_liquid_phase():

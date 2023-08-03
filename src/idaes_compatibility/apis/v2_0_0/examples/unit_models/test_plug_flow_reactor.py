@@ -161,7 +161,7 @@ def test_example():
     m.fs.R101.conversion.fix(0.5)
     m.fs.R101.length.fix(1 * pyunits.m)
     m.fs.R101.heat_duty.setub(
-        0 * pyunits.J / pyunits.s
+        0 * pyunits.J / pyunits.m / pyunits.s
     )  # heat duty is only used for cooling
 
     print(degrees_of_freedom(m))
