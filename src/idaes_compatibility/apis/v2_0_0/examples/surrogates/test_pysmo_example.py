@@ -190,12 +190,7 @@ def test_example(mock_show):
     m.fs.ng_steam_ratio.fix(1)
 
     solver = SolverFactory("ipopt")
-    [status_obj, solved, iters, time] = _run_ipopt_with_stats(m, solver)
-
-    print("Model status: ", status_obj)
-    print("Solution optimal: ", solved)
-    print("IPOPT iterations: ", iters)
-    print("IPOPT runtime: ", time)
+    results = solver.solve(m)
 
     print()
     print("Steam flowrate = ", value(m.fs.steam_flowrate))
