@@ -17,121 +17,89 @@ PressureChanger model
 import pytest
 import os
 import json
-from collections import OrderedDict
 
-import idaes.core.util.convergence.convergence_base as cb
-
-import pyomo.environ as pe
+from pyomo.environ import ConcreteModel
 from pyomo.common.fileutils import this_file_dir
-from pyomo.common.unittest import assertStructuredAlmostEqual
 
 from idaes.core import FlowsheetBlock
 from idaes.models.unit_models.pressure_changer import (
     PressureChanger,
     ThermodynamicAssumption,
 )
-from idaes.core.solvers import get_solver
-
 # Import property package for testing
 from idaes.models.properties import iapws95 as pp
+
+from idaes.core.initialization import (
+    BlockTriangularizationInitializer,
+    InitializationStatus,
+)
+
+from idaes.core.surrogate.pysmo.sampling import LatinHypercubeSampling
+from idaes.core.util.parameter_sweep import ParameterSweepSpecification
+from idaes.core.util.model_diagnostics import IpoptConvergenceAnalysis
 
 
 currdir = this_file_dir()
 fname = os.path.join(currdir, "isothermal_pressure_changer.json")
 
 
-@cb.register_convergence_class("IsothermalPressureChanger")
-class IsothermalPressureChangerConvergenceEvaluation(cb.ConvergenceEvaluation):
-    def get_specification(self):
-        """
-        Returns the convergence evaluation specification for the
-        isothermal PressureChanger unit model
+def build_model():
+    m = ConcreteModel()
+    m.fs = FlowsheetBlock(dynamic=False)
+    m.fs.props = pp.Iapws95ParameterBlock(amount_basis=pp.AmountBasis.MASS)
 
-        Returns
-        -------
-           ConvergenceEvaluationSpecification
-        """
-        s = cb.ConvergenceEvaluationSpecification()
+    m.fs.unit = PressureChanger(
+        property_package=m.fs.props,
+        thermodynamic_assumption=ThermodynamicAssumption.isothermal,
+    )
 
-        s.add_sampled_input(
-            name="Inlet_Flowrate",
-            pyomo_path="fs.pc.control_volume.properties_in[0].flow_mass",
-            lower=1,
-            upper=1e6,
-            distribution="uniform",
-        )
+    m.fs.unit.deltaP.fix(-1e3)
+    m.fs.unit.inlet[:].flow_mass.fix(27.5e3)
+    m.fs.unit.inlet[:].enth_mass.fix(4000)
+    m.fs.unit.inlet[:].pressure.fix(2e6)
 
-        s.add_sampled_input(
-            name="Inlet_Pressure",
-            pyomo_path="fs.pc.control_volume.properties_in[0].pressure",
-            lower=10,
-            upper=2e8,
-            distribution="uniform",
-        )
+    # init_state = {"flow_mass": 27.5e3, "pressure": 2e6, "enth_mass": 4000}
 
-        s.add_sampled_input(
-            name="Inlet_Enthalpy",
-            pyomo_path="fs.pc.control_volume.properties_in[0].enth_mass",
-            lower=2e4,
-            upper=4.4e6,
-            distribution="uniform",
-        )
+    initializer = BlockTriangularizationInitializer(constraint_tolerance=2e-5)
+    initializer.initialize(m.fs.unit)
 
-        s.add_sampled_input(
-            name="Pressure_Change",
-            pyomo_path="fs.pc.deltaP[0]",
-            lower=-5e5,
-            upper=5e5,
-            distribution="uniform",
-        )
+    assert initializer.summary[m.fs.unit]["status"] == InitializationStatus.Ok
 
-        # TODO: Add deltaP as an input?
-        return s
+    # return the initialized model
+    return m
 
-    def get_initialized_model(self):
-        """
-        Returns an initialized model for the PressureChanger unit model
-        convergence evaluation
 
-        Returns
-        -------
-           Pyomo model : returns a pyomo model of the PressureChanger unit
-        """
-        m = pe.ConcreteModel()
-        m.fs = FlowsheetBlock(dynamic=False)
-        m.fs.props = pp.Iapws95ParameterBlock(amount_basis=pp.AmountBasis.MASS)
+def generate_baseline():
+    model = build_model()
 
-        m.fs.pc = PressureChanger(
-            property_package=m.fs.props,
-            thermodynamic_assumption=ThermodynamicAssumption.isothermal,
-        )
+    spec = ParameterSweepSpecification()
+    spec.add_sampled_input("fs.unit.inlet.flow_mass[0]", lower=1, upper=1e6)
+    spec.add_sampled_input("fs.unit.inlet.pressure[0]", lower=10, upper=2e8)
+    spec.add_sampled_input("fs.unit.inlet.enth_mass[0]", lower=2e4, upper=4.4e6)
+    spec.add_sampled_input("fs.unit.deltaP[0]", lower=-5e5, upper=5e5)
+    spec.set_sampling_method(LatinHypercubeSampling)
+    spec.set_sample_size(200)
 
-        m.fs.pc.deltaP.fix(-1e3)
-        m.fs.pc.inlet[:].flow_mass.fix(27.5e3)
-        m.fs.pc.inlet[:].enth_mass.fix(4000)
-        m.fs.pc.inlet[:].pressure.fix(2e6)
+    spec.generate_samples()
 
-        init_state = {"flow_mass": 27.5e3, "pressure": 2e6, "enth_mass": 4000}
+    ca = IpoptConvergenceAnalysis(
+        model,
+        input_specification=spec,
+    )
 
-        m.fs.pc.initialize(state_args=init_state)
+    ca.run_convergence_analysis()
 
-        # Create a solver for initialization
-        opt = self.get_solver()
-        opt.solve(m)
+    ca.to_json_file(fname)
 
-        # return the initialized model
-        return m
+    ca.report_convergence_summary()
 
 
 def test_isothermal_pressure_changer_robustness():
-    ceval = IsothermalPressureChangerConvergenceEvaluation()
+    model = build_model()
+    ca = IpoptConvergenceAnalysis(model)
 
-    # Uncomment to create new baseline file
-    # ceval.write_baseline_file(fname, 100)
+    ca.assert_baseline_comparison(fname)
 
-    solves, iters, restoration, regularization = ceval.compare_to_baseline(fname, rel_tol=0.1, abs_tol=1)
 
-    assert solves == []
-    assert iters == []
-    assert restoration == []
-    assert regularization == []
+if __name__ == "__main__":
+    generate_baseline()
