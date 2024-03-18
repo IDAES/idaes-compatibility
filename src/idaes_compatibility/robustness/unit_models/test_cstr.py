@@ -31,7 +31,7 @@ from idaes.models.properties.examples.saponification_reactions import (
 )
 from idaes.core.initialization import BlockTriangularizationInitializer
 
-from idaes.core.surrogate.pysmo.sampling import UniformSampling
+from idaes.core.surrogate.pysmo.sampling import LatinHypercubeSampling
 from idaes.core.util.parameter_sweep import ParameterSweepSpecification
 from idaes.core.util.model_diagnostics import IpoptConvergenceAnalysis
 
@@ -69,7 +69,7 @@ def build_model():
     m.fs.unit.inlet.pressure.fix(101325.0)
 
     m.fs.unit.volume.fix(1.5e-03)
-    m.fs.unit.heat_duty.fix(0)
+    m.fs.unit.outlet.temperature.fix(303.15)
     m.fs.unit.deltaP.fix(0)
 
     initializer = BlockTriangularizationInitializer(constraint_tolerance=2e-5)
@@ -83,12 +83,16 @@ def generate_baseline():
 
     spec = ParameterSweepSpecification()
     spec.add_sampled_input("fs.unit.inlet.flow_vol[0]", lower=1e-3, upper=1)
+    spec.add_sampled_input("fs.unit.inlet.conc_mol_comp[0,NaOH]", lower=10, upper=200)
+    spec.add_sampled_input("fs.unit.inlet.conc_mol_comp[0,EthylAcetate]", lower=10, upper=200)
+    spec.add_sampled_input("fs.unit.inlet.conc_mol_comp[0,SodiumAcetate]", lower=1e-8, upper=10)
+    spec.add_sampled_input("fs.unit.inlet.conc_mol_comp[0,Ethanol]", lower=1e-8, upper=10)
     spec.add_sampled_input("fs.unit.inlet.pressure[0]", lower=2e3, upper=9e5)
     spec.add_sampled_input("fs.unit.inlet.temperature[0]", lower=300, upper=320)
     spec.add_sampled_input("fs.unit.volume[0]", lower=1e-3, upper=1)
-    spec.add_sampled_input("fs.unit.heat_duty[0]", lower=-1000, upper=1000)
-    spec.set_sampling_method(UniformSampling)
-    spec.set_sample_size([4, 4, 3, 4, 3])
+    spec.add_sampled_input("fs.unit.outlet.temperature[0]", lower=300, upper=320)
+    spec.set_sampling_method(LatinHypercubeSampling)
+    spec.set_sample_size(200)
 
     spec.generate_samples()
 
