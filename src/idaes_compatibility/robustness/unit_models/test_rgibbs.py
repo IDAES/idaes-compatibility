@@ -703,7 +703,7 @@ def generate_baseline():
     ca.report_convergence_summary()
 
 
-def test_isothermal_pressure_changer_robustness():
+def test_gibbs_reactor_robustness():
     model = build_model()
     ca = IpoptConvergenceAnalysis(model)
 

@@ -18,7 +18,7 @@ import pytest
 import os
 import json
 
-import pyomo.environ as pyo
+from pyomo.environ import ConcreteModel
 from pyomo.common.fileutils import this_file_dir
 
 from idaes.core import FlowsheetBlock
@@ -29,7 +29,10 @@ from idaes.models.properties.examples.saponification_thermo import (
 from idaes.models.properties.examples.saponification_reactions import (
     SaponificationReactionParameterBlock,
 )
-from idaes.core.initialization import BlockTriangularizationInitializer
+from idaes.core.initialization import (
+    BlockTriangularizationInitializer,
+    InitializationStatus,
+)
 
 from idaes.core.surrogate.pysmo.sampling import LatinHypercubeSampling
 from idaes.core.util.parameter_sweep import ParameterSweepSpecification
@@ -41,7 +44,7 @@ fname = os.path.join(currdir, "cstr.json")
 
 
 def build_model():
-    m = pyo.ConcreteModel()
+    m = ConcreteModel()
     m.fs = FlowsheetBlock(dynamic=False)
 
     m.fs.properties = SaponificationParameterBlock()
@@ -74,6 +77,8 @@ def build_model():
 
     initializer = BlockTriangularizationInitializer(constraint_tolerance=2e-5)
     initializer.initialize(m.fs.unit)
+
+    assert initializer.summary[m.fs.unit]["status"] == InitializationStatus.Ok
 
     return m
 
@@ -108,7 +113,7 @@ def generate_baseline():
     ca.report_convergence_summary()
 
 
-def test_isothermal_pressure_changer_robustness():
+def test_cstr_robustness():
     model = build_model()
     ca = IpoptConvergenceAnalysis(model)
 
