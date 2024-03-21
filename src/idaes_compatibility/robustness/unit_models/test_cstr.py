@@ -12,7 +12,7 @@
 #################################################################################
 """
 This module contains the code for convergence testing of the
-PressureChanger model
+CSTR model
 """
 import pytest
 import os
@@ -22,13 +22,13 @@ from pyomo.environ import ConcreteModel
 from pyomo.common.fileutils import this_file_dir
 
 from idaes.core import FlowsheetBlock
-from idaes.models.unit_models.pressure_changer import (
-    PressureChanger,
-    ThermodynamicAssumption,
+from idaes.models.unit_models.cstr import CSTR
+from idaes.models.properties.examples.saponification_thermo import (
+    SaponificationParameterBlock,
 )
-# Import property package for testing
-from idaes.models.properties import iapws95 as pp
-
+from idaes.models.properties.examples.saponification_reactions import (
+    SaponificationReactionParameterBlock,
+)
 from idaes.core.initialization import (
     BlockTriangularizationInitializer,
     InitializationStatus,
@@ -40,32 +40,46 @@ from idaes.core.util.model_diagnostics import IpoptConvergenceAnalysis
 
 
 currdir = this_file_dir()
-fname = os.path.join(currdir, "isothermal_pressure_changer.json")
+fname = os.path.join(currdir, "cstr.json")
 
 
 def build_model():
     m = ConcreteModel()
     m.fs = FlowsheetBlock(dynamic=False)
-    m.fs.props = pp.Iapws95ParameterBlock(amount_basis=pp.AmountBasis.MASS)
 
-    m.fs.unit = PressureChanger(
-        property_package=m.fs.props,
-        thermodynamic_assumption=ThermodynamicAssumption.isothermal,
+    m.fs.properties = SaponificationParameterBlock()
+    m.fs.reactions = SaponificationReactionParameterBlock(
+        property_package=m.fs.properties
     )
 
-    m.fs.unit.deltaP.fix(-1e3)
-    m.fs.unit.inlet[:].flow_mass.fix(27.5e3)
-    m.fs.unit.inlet[:].enth_mass.fix(4000)
-    m.fs.unit.inlet[:].pressure.fix(2e6)
+    m.fs.unit = CSTR(
+        property_package=m.fs.properties,
+        reaction_package=m.fs.reactions,
+        has_equilibrium_reactions=False,
+        has_heat_transfer=True,
+        has_heat_of_reaction=True,
+        has_pressure_change=True,
+    )
 
-    # init_state = {"flow_mass": 27.5e3, "pressure": 2e6, "enth_mass": 4000}
+    m.fs.unit.inlet.flow_vol.fix(1.0e-03)
+    m.fs.unit.inlet.conc_mol_comp[0, "H2O"].fix(55388.0)
+    m.fs.unit.inlet.conc_mol_comp[0, "NaOH"].fix(100.0)
+    m.fs.unit.inlet.conc_mol_comp[0, "EthylAcetate"].fix(100.0)
+    m.fs.unit.inlet.conc_mol_comp[0, "SodiumAcetate"].fix(1e-8)
+    m.fs.unit.inlet.conc_mol_comp[0, "Ethanol"].fix(1e-8)
+
+    m.fs.unit.inlet.temperature.fix(303.15)
+    m.fs.unit.inlet.pressure.fix(101325.0)
+
+    m.fs.unit.volume.fix(1.5e-03)
+    m.fs.unit.outlet.temperature.fix(303.15)
+    m.fs.unit.deltaP.fix(0)
 
     initializer = BlockTriangularizationInitializer(constraint_tolerance=2e-5)
     initializer.initialize(m.fs.unit)
 
     assert initializer.summary[m.fs.unit]["status"] == InitializationStatus.Ok
 
-    # return the initialized model
     return m
 
 
@@ -73,10 +87,15 @@ def generate_baseline():
     model = build_model()
 
     spec = ParameterSweepSpecification()
-    spec.add_sampled_input("fs.unit.inlet.flow_mass[0]", lower=1, upper=1e6)
-    spec.add_sampled_input("fs.unit.inlet.pressure[0]", lower=10, upper=2e8)
-    spec.add_sampled_input("fs.unit.inlet.enth_mass[0]", lower=2e4, upper=4.4e6)
-    spec.add_sampled_input("fs.unit.deltaP[0]", lower=-5e5, upper=5e5)
+    spec.add_sampled_input("fs.unit.inlet.flow_vol[0]", lower=1e-3, upper=1)
+    spec.add_sampled_input("fs.unit.inlet.conc_mol_comp[0,NaOH]", lower=10, upper=200)
+    spec.add_sampled_input("fs.unit.inlet.conc_mol_comp[0,EthylAcetate]", lower=10, upper=200)
+    spec.add_sampled_input("fs.unit.inlet.conc_mol_comp[0,SodiumAcetate]", lower=1e-8, upper=10)
+    spec.add_sampled_input("fs.unit.inlet.conc_mol_comp[0,Ethanol]", lower=1e-8, upper=10)
+    spec.add_sampled_input("fs.unit.inlet.pressure[0]", lower=2e3, upper=9e5)
+    spec.add_sampled_input("fs.unit.inlet.temperature[0]", lower=300, upper=320)
+    spec.add_sampled_input("fs.unit.volume[0]", lower=1e-3, upper=1)
+    spec.add_sampled_input("fs.unit.outlet.temperature[0]", lower=300, upper=320)
     spec.set_sampling_method(LatinHypercubeSampling)
     spec.set_sample_size(200)
 
@@ -94,7 +113,7 @@ def generate_baseline():
     ca.report_convergence_summary()
 
 
-def test_isothermal_pressure_changer_robustness():
+def test_cstr_robustness():
     model = build_model()
     ca = IpoptConvergenceAnalysis(model)
 
