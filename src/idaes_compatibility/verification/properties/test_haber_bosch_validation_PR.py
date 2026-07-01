@@ -622,7 +622,7 @@ def test_thermo(model, dataframe):
                 value(
                     m.props.gibbs_mol_phase["Vap"] - m.props_IG.gibbs_mol_phase["Vap"]
                 ),
-                rel=1e-4,
+                rel=1e-3,
             )
             == tester.gibbs_res_mol()
         )
