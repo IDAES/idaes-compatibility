@@ -1307,7 +1307,7 @@
       "6": {
          "success": true,
          "results": {
-            "iters": 13,
+            "iters": 10,
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.131,
@@ -1560,9 +1560,9 @@
       "29": {
          "success": true,
          "results": {
-            "iters": 6,
+            "iters": 4,
             "iters_in_restoration": 0,
-            "iters_w_regularization": 0,
+            "iters_w_regularization": 1,
             "time": 0.034,
             "numerical_issues": true
          },
@@ -1736,9 +1736,9 @@
       "45": {
          "success": true,
          "results": {
-            "iters": 8,
-            "iters_in_restoration": 0,
-            "iters_w_regularization": 0,
+            "iters": 17,
+            "iters_in_restoration": 11,
+            "iters_w_regularization": 1,
             "time": 0.10300000000000001,
             "numerical_issues": true
          },
@@ -1769,7 +1769,7 @@
       "48": {
          "success": true,
          "results": {
-            "iters": 11,
+            "iters": 9,
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.07300000000000001,
@@ -1857,9 +1857,9 @@
       "56": {
          "success": true,
          "results": {
-            "iters": 9,
+            "iters": 8,
             "iters_in_restoration": 0,
-            "iters_w_regularization": 0,
+            "iters_w_regularization": 2,
             "time": 0.06,
             "numerical_issues": true
          },
@@ -2220,9 +2220,9 @@
       "89": {
          "success": true,
          "results": {
-            "iters": 6,
+            "iters": 8,
             "iters_in_restoration": 0,
-            "iters_w_regularization": 1,
+            "iters_w_regularization": 0,
             "time": 0.05,
             "numerical_issues": true
          },
@@ -2583,7 +2583,7 @@
       "122": {
          "success": true,
          "results": {
-            "iters": 9,
+            "iters": 10,
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.059000000000000004,
@@ -2616,9 +2616,9 @@
       "125": {
          "success": true,
          "results": {
-            "iters": 7,
+            "iters": 12,
             "iters_in_restoration": 0,
-            "iters_w_regularization": 1,
+            "iters_w_regularization": 2,
             "time": 0.045,
             "numerical_issues": true
          },
@@ -2737,9 +2737,9 @@
       "136": {
          "success": true,
          "results": {
-            "iters": 43,
-            "iters_in_restoration": 37,
-            "iters_w_regularization": 7,
+            "iters": 14,
+            "iters_in_restoration": 0,
+            "iters_w_regularization": 0,
             "time": 0.248,
             "numerical_issues": true
          },
@@ -2814,9 +2814,9 @@
       "143": {
          "success": true,
          "results": {
-            "iters": 16,
-            "iters_in_restoration": 7,
-            "iters_w_regularization": 2,
+            "iters": 12,
+            "iters_in_restoration": 0,
+            "iters_w_regularization": 0,
             "time": 0.29800000000000004,
             "numerical_issues": true
          },
@@ -2968,9 +2968,9 @@
       "157": {
          "success": true,
          "results": {
-            "iters": 9,
-            "iters_in_restoration": 0,
-            "iters_w_regularization": 0,
+            "iters": 13,
+            "iters_in_restoration": 8,
+            "iters_w_regularization": 1,
             "time": 0.089,
             "numerical_issues": true
          },
@@ -3069,7 +3069,7 @@
          "results": {
             "iters": 21,
             "iters_in_restoration": 9,
-            "iters_w_regularization": 2,
+            "iters_w_regularization": 1,
             "time": 0.22,
             "numerical_issues": true
          },
@@ -3133,8 +3133,8 @@
       "172": {
          "success": true,
          "results": {
-            "iters": 31,
-            "iters_in_restoration": 25,
+            "iters": 10,
+            "iters_in_restoration": 0,
             "iters_w_regularization": 1,
             "time": 0.183,
             "numerical_issues": true
@@ -3232,8 +3232,8 @@
       "181": {
          "success": true,
          "results": {
-            "iters": 16,
-            "iters_in_restoration": 8,
+            "iters": 9,
+            "iters_in_restoration": 0,
             "iters_w_regularization": 1,
             "time": 0.30600000000000005,
             "numerical_issues": true

@@ -1451,7 +1451,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.011,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -1495,7 +1495,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.006,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -1572,7 +1572,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.009000000000000001,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -1700,7 +1700,7 @@
       "23": {
          "success": true,
          "results": {
-            "iters": 6,
+            "iters": 4,
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.014,
@@ -1737,7 +1737,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.012,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -1792,7 +1792,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.019,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -1825,7 +1825,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.012,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -1935,7 +1935,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.022,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -2034,7 +2034,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.01,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -2078,7 +2078,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.014,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -2111,7 +2111,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.007,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -2144,7 +2144,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.006,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -2243,7 +2243,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.005,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -2265,7 +2265,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.013000000000000001,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -2342,7 +2342,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.015,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -2419,7 +2419,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.015,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -2430,7 +2430,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.009000000000000001,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -2496,7 +2496,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.012,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -2529,7 +2529,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.01,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -2595,7 +2595,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.012,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -2661,7 +2661,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.006,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -2782,7 +2782,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.008,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -2870,7 +2870,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.01,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -3090,7 +3090,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.012,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -3211,7 +3211,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.013000000000000001,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -3299,7 +3299,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.008,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -3343,7 +3343,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.01,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -3398,7 +3398,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.011,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -3486,7 +3486,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.013000000000000001,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -3596,7 +3596,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.015,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -3618,7 +3618,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.011,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
