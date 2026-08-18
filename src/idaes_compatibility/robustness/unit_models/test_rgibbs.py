@@ -32,7 +32,7 @@ from idaes.models.properties.activity_coeff_models.methane_combustion_ideal impo
     MethaneParameterBlock as MethaneCombustionParameterBlock,
 )
 from idaes.core.initialization import (
-    BlockTriangularizationInitializer,
+    SingleControlVolumeUnitInitializer,
     InitializationStatus,
 )
 
@@ -76,25 +76,6 @@ def build_model():
     # TODO: This really should be fixed in the property package, but breaks other tests
     m.fs.unit.control_volume.properties_out[0].pressure.setlb(1000)
     m.fs.unit.control_volume.properties_out[0].mole_frac_phase_comp.setlb(1e-12)
-
-    initializer = BlockTriangularizationInitializer(constraint_tolerance=2e-5)
-    initializer.initialize(
-        m.fs.unit,
-        initial_guesses={
-            "control_volume.properties_out[0].pressure": 101325.0,
-            "control_volume.properties_out[0].flow_mol": 251.05,
-            "control_volume.properties_out[0].mole_frac_comp[CH4]": 1e-5,
-            "control_volume.properties_out[0].mole_frac_comp[CO]": 0.0916,
-            "control_volume.properties_out[0].mole_frac_comp[CO2]": 0.0281,
-            "control_volume.properties_out[0].mole_frac_comp[H2]": 0.1155,
-            "control_volume.properties_out[0].mole_frac_comp[H2O]": 0.1633,
-            "control_volume.properties_out[0].mole_frac_comp[N2]": 0.59478,
-            "control_volume.properties_out[0].mole_frac_comp[NH3]": 1e-5,
-            "control_volume.properties_out[0].mole_frac_comp[O2]": 0.0067,
-        },
-    )
-
-    assert initializer.summary[m.fs.unit]["status"] == InitializationStatus.Ok
 
     m.fs.sum_mol_frac = Constraint(
         expr=1==sum(m.fs.unit.inlet.mole_frac_comp[0, j] for j in m.fs.properties.component_list)
@@ -669,6 +650,25 @@ def build_model():
     scaling = TransformationFactory("core.scale_model")
     sm = scaling.create_using(m, rename=False)
 
+    initializer = SingleControlVolumeUnitInitializer()
+    initializer.initialize(
+        sm.fs.unit,
+        initial_guesses={
+            "control_volume.properties_out[0].pressure": 101325.0,
+            "control_volume.properties_out[0].flow_mol": 251.05,
+            "control_volume.properties_out[0].mole_frac_comp[CH4]": 1e-5,
+            "control_volume.properties_out[0].mole_frac_comp[CO]": 0.0916,
+            "control_volume.properties_out[0].mole_frac_comp[CO2]": 0.0281,
+            "control_volume.properties_out[0].mole_frac_comp[H2]": 0.1155,
+            "control_volume.properties_out[0].mole_frac_comp[H2O]": 0.1633,
+            "control_volume.properties_out[0].mole_frac_comp[N2]": 0.59478,
+            "control_volume.properties_out[0].mole_frac_comp[NH3]": 1e-5,
+            "control_volume.properties_out[0].mole_frac_comp[O2]": 0.0067,
+        },
+    )
+
+    assert initializer.summary[sm.fs.unit]["status"] == InitializationStatus.Ok
+
     return sm
 
 
@@ -708,7 +708,6 @@ def test_gibbs_reactor_robustness():
     ca = IpoptConvergenceAnalysis(model)
 
     ca.assert_baseline_comparison(fname)
-
 
 if __name__ == "__main__":
     generate_baseline()
