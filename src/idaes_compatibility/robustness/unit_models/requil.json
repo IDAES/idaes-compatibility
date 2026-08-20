@@ -2069,7 +2069,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.0,
-            "numerical_issues": true
+            "numerical_issues": false
          },
          "error": null
       },
@@ -2091,7 +2091,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.0,
-            "numerical_issues": true
+            "numerical_issues": false
          },
          "error": null
       },
@@ -2113,7 +2113,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.001,
-            "numerical_issues": true
+            "numerical_issues": false
          },
          "error": null
       },
@@ -2245,7 +2245,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.0,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -2322,15 +2322,15 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.0,
-            "numerical_issues": true
+            "numerical_issues": false
          },
          "error": null
       },
       "24": {
          "success": false,
          "results": {
-            "iters": 27,
-            "iters_in_restoration": 27,
+            "iters": 36,
+            "iters_in_restoration": 36,
             "iters_w_regularization": 0,
             "time": 0.004,
             "numerical_issues": true
@@ -2355,7 +2355,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.001,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -2373,9 +2373,9 @@
       "28": {
          "success": false,
          "results": {
-            "iters": 61,
-            "iters_in_restoration": 61,
-            "iters_w_regularization": 19,
+            "iters": 46,
+            "iters_in_restoration": 46,
+            "iters_w_regularization": 13,
             "time": 0.004,
             "numerical_issues": true
          },
@@ -2439,8 +2439,8 @@
       "34": {
          "success": false,
          "results": {
-            "iters": 43,
-            "iters_in_restoration": 43,
+            "iters": 42,
+            "iters_in_restoration": 42,
             "iters_w_regularization": 10,
             "time": 0.008,
             "numerical_issues": true
@@ -2465,7 +2465,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.001,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -2564,7 +2564,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.001,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -2597,7 +2597,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.001,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -2608,7 +2608,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.001,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -2619,7 +2619,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.001,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -2630,7 +2630,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.002,
-            "numerical_issues": true
+            "numerical_issues": false
          },
          "error": null
       },
@@ -2641,7 +2641,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.001,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -2674,7 +2674,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.001,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -2714,8 +2714,8 @@
       "59": {
          "success": false,
          "results": {
-            "iters": 57,
-            "iters_in_restoration": 57,
+            "iters": 79,
+            "iters_in_restoration": 79,
             "iters_w_regularization": 3,
             "time": 0.011,
             "numerical_issues": true
@@ -2751,7 +2751,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.0,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -2762,7 +2762,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.001,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -2795,7 +2795,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.001,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -2828,7 +2828,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.001,
-            "numerical_issues": true
+            "numerical_issues": false
          },
          "error": null
       },
@@ -2846,8 +2846,8 @@
       "71": {
          "success": false,
          "results": {
-            "iters": 38,
-            "iters_in_restoration": 38,
+            "iters": 42,
+            "iters_in_restoration": 42,
             "iters_w_regularization": 5,
             "time": 0.009,
             "numerical_issues": true
@@ -2894,7 +2894,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.001,
-            "numerical_issues": true
+            "numerical_issues": false
          },
          "error": null
       },
@@ -2938,7 +2938,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.001,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -2949,7 +2949,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.001,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -2982,7 +2982,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.001,
-            "numerical_issues": true
+            "numerical_issues": false
          },
          "error": null
       },
@@ -3004,7 +3004,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.0,
-            "numerical_issues": true
+            "numerical_issues": false
          },
          "error": null
       },
@@ -3015,7 +3015,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.001,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -3158,7 +3158,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.001,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -3224,7 +3224,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.0,
-            "numerical_issues": true
+            "numerical_issues": false
          },
          "error": null
       },
@@ -3257,15 +3257,15 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.0,
-            "numerical_issues": true
+            "numerical_issues": false
          },
          "error": null
       },
       "109": {
          "success": false,
          "results": {
-            "iters": 39,
-            "iters_in_restoration": 39,
+            "iters": 37,
+            "iters_in_restoration": 37,
             "iters_w_regularization": 6,
             "time": 0.003,
             "numerical_issues": true
@@ -3411,7 +3411,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.001,
-            "numerical_issues": true
+            "numerical_issues": false
          },
          "error": null
       },
@@ -3466,7 +3466,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.002,
-            "numerical_issues": true
+            "numerical_issues": false
          },
          "error": null
       },
@@ -3488,7 +3488,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.001,
-            "numerical_issues": true
+            "numerical_issues": false
          },
          "error": null
       },
@@ -3510,7 +3510,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.001,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -3554,15 +3554,15 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.001,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
       "136": {
          "success": false,
          "results": {
-            "iters": 39,
-            "iters_in_restoration": 39,
+            "iters": 47,
+            "iters_in_restoration": 47,
             "iters_w_regularization": 5,
             "time": 0.007,
             "numerical_issues": true
@@ -3587,7 +3587,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.001,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -3598,7 +3598,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.0,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -3609,7 +3609,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.0,
-            "numerical_issues": true
+            "numerical_issues": false
          },
          "error": null
       },
@@ -3631,7 +3631,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.001,
-            "numerical_issues": true
+            "numerical_issues": false
          },
          "error": null
       },
@@ -3851,7 +3851,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.001,
-            "numerical_issues": true
+            "numerical_issues": false
          },
          "error": null
       },
@@ -3873,7 +3873,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.001,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -4115,7 +4115,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.001,
-            "numerical_issues": true
+            "numerical_issues": false
          },
          "error": null
       },
@@ -4126,7 +4126,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.001,
-            "numerical_issues": false
+            "numerical_issues": true
          },
          "error": null
       },
@@ -4137,16 +4137,16 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.0,
-            "numerical_issues": true
+            "numerical_issues": false
          },
          "error": null
       },
       "189": {
          "success": true,
          "results": {
-            "iters": 41,
-            "iters_in_restoration": 41,
-            "iters_w_regularization": 13,
+            "iters": 39,
+            "iters_in_restoration": 39,
+            "iters_w_regularization": 11,
             "time": 0.003,
             "numerical_issues": true
          },
@@ -4177,8 +4177,8 @@
       "192": {
          "success": false,
          "results": {
-            "iters": 57,
-            "iters_in_restoration": 57,
+            "iters": 44,
+            "iters_in_restoration": 44,
             "iters_w_regularization": 7,
             "time": 0.013000000000000001,
             "numerical_issues": true
@@ -4203,7 +4203,7 @@
             "iters_in_restoration": 0,
             "iters_w_regularization": 0,
             "time": 0.001,
-            "numerical_issues": true
+            "numerical_issues": false
          },
          "error": null
       },
