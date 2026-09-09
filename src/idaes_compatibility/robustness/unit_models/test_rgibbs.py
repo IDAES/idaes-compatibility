@@ -39,6 +39,7 @@ from idaes.core.initialization import (
 from idaes.core.surrogate.pysmo.sampling import LatinHypercubeSampling
 from idaes.core.util.parameter_sweep import ParameterSweepSpecification
 from idaes.core.util.model_diagnostics import IpoptConvergenceAnalysis
+from idaes_compatibility.robustness.baseline import assert_baseline_not_regressed
 
 
 currdir = this_file_dir()
@@ -707,7 +708,8 @@ def test_gibbs_reactor_robustness():
     model = build_model()
     ca = IpoptConvergenceAnalysis(model)
 
-    ca.assert_baseline_comparison(fname)
+    assert_baseline_not_regressed(ca, fname)
+
 
 if __name__ == "__main__":
     generate_baseline()
